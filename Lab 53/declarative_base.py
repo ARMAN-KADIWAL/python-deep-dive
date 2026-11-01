@@ -126,7 +126,7 @@ def main():
 
     print("\n=== Validation checks ===")
     try:
-        User(id=2, username="this username is far too long for its field", email="x@example.com")
+        User(id=2, username="x" * 60, email="x@example.com")
     except ValueError as error:
         print("Length validation:", error)
     try:
