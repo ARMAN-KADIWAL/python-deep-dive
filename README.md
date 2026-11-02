@@ -46,6 +46,7 @@ Python learning labs organized by lab number. Each lab folder contains runnable 
 - [Lab 51 - Context Managers](Lab%2051/)
 - [Lab 52 - Iterators and Iterables](Lab%2052/)
 - [Lab 53 - Metaclasses](Lab%2053/)
+- [Lab 54 - Reading and Writing Files](Lab%2054/)
 
 ## Proof of Completion — Daily Work Log
 
