@@ -1,0 +1,5 @@
+Welcome to File I/O Lab!
+This is line 2 of our sample file.
+Python makes file operations easy.
+Learning file handling is important for data processing.
+End of sample file.
