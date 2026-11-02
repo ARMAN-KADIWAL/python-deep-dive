@@ -1,0 +1,26 @@
+print("=== File Appending Example ===")
+
+print("Creating base file...")
+base_file = open("log_file.txt", "w", encoding="utf-8")
+base_file.write("=== Application Log ===\n")
+base_file.write("Application started at 09:00 AM\n")
+base_file.write("User login successful\n")
+base_file.close()
+
+print("Base file created. Current content:")
+read_file = open("log_file.txt", "r", encoding="utf-8")
+print(read_file.read())
+read_file.close()
+
+print("\nAppending new log entries...")
+append_file = open("log_file.txt", "a", encoding="utf-8")
+append_file.write("Data processing started\n")
+append_file.write("Processing 100 records\n")
+append_file.write("Data processing completed\n")
+append_file.write("Application closed at 05:00 PM\n")
+append_file.close()
+
+print("New entries appended. Final content:")
+final_read = open("log_file.txt", "r", encoding="utf-8")
+print(final_read.read())
+final_read.close()
