@@ -75,7 +75,7 @@ class CSVLabTests(unittest.TestCase):
         self.assertTrue(manager.load_from_csv(self.students_file))
         self.assertEqual(len(manager.search_records({"Grade": "A"})), 2)
         self.assertEqual(manager.update_record("Subject", "Physics", {"Note": "Review"}), 1)
-        self.assertEqual(manager.delete_records("Name", "Bob"), 1)
+        self.assertEqual(manager.delete_records("Name", "Carol"), 1)
         output = os.path.join(self.temp_dir.name, "managed.csv")
         json_output = os.path.join(self.temp_dir.name, "managed.json")
         self.assertTrue(manager.save_to_csv(output))
@@ -83,7 +83,7 @@ class CSVLabTests(unittest.TestCase):
         with open(json_output, encoding="utf-8") as file:
             exported = json.load(file)
         self.assertEqual(len(exported), 2)
-        self.assertEqual(exported[0]["Note"], "Review")
+        self.assertEqual(exported[1]["Note"], "Review")
 
 
 if __name__ == "__main__":
