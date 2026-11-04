@@ -1,0 +1,13 @@
+{
+    "university": "Tech University",
+    "location": "California, USA",
+    "established": 1965,
+    "departments": [
+        {"name": "Computer Science", "head": "Dr. Smith", "students": 450, "programs": ["BS", "MS", "PhD"]},
+        {"name": "Mathematics", "head": "Dr. Johnson", "students": 320, "programs": ["BS", "MS"]}
+    ],
+    "facilities": {
+        "library": {"name": "Central Library", "books": 50000, "digital_resources": true},
+        "labs": {"computer_labs": 15, "research_labs": 8}
+    }
+}
