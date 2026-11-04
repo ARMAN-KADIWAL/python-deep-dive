@@ -48,6 +48,7 @@ Python learning labs organized by lab number. Each lab folder contains runnable 
 - [Lab 53 - Metaclasses](Lab%2053/)
 - [Lab 54 - Reading and Writing Files](Lab%2054/)
 - [Lab 55 - Handling CSV Data](Lab%2055/)
+- [Lab 56 - Handling JSON Data](Lab%2056/)
 
 ## Proof of Completion — Daily Work Log
 
@@ -137,6 +138,15 @@ For Lab 40, run these commands from inside the Lab 40 directory:
 
     python3 shapes.py
     python3 -m unittest -v test_lab40.py
+
+For Lab 56, run these commands from inside the Lab 56 directory:
+
+    python3 read_json.py
+    python3 write_json.py
+    python3 parse_nested_json.py
+    python3 handle_json_errors.py
+    python3 modify_json.py
+    python3 -m unittest -v
 
 For Lab 41:
 
