@@ -1,0 +1,9 @@
+{
+    "name": "Alice Johnson",
+    "age": 20,
+    "major": "Computer Science",
+    "gpa": 3.8,
+    "courses": ["Python Programming", "Data Structures", "Web Development"],
+    "active": true,
+    "graduation_year": 2025
+}
