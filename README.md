@@ -49,6 +49,7 @@ Python learning labs organized by lab number. Each lab folder contains runnable 
 - [Lab 54 - Reading and Writing Files](Lab%2054/)
 - [Lab 55 - Handling CSV Data](Lab%2055/)
 - [Lab 56 - Handling JSON Data](Lab%2056/)
+- [Lab 57 - Interacting with Databases - Using SQLite](Lab%2057/)
 
 ## Proof of Completion — Daily Work Log
 
@@ -146,6 +147,15 @@ For Lab 56, run these commands from inside the Lab 56 directory:
     python3 parse_nested_json.py
     python3 handle_json_errors.py
     python3 modify_json.py
+    python3 -m unittest -v
+
+For Lab 57, run these commands from inside the Lab 57 directory:
+
+    python3 -m pip install -r requirements.txt
+    python3 student_management.py
+    python3 data_insertion.py
+    python3 data_queries.py --search John
+    python3 data_updates.py
     python3 -m unittest -v
 
 For Lab 41:
