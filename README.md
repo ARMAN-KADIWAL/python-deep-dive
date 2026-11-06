@@ -50,6 +50,7 @@ Python learning labs organized by lab number. Each lab folder contains runnable 
 - [Lab 55 - Handling CSV Data](Lab%2055/)
 - [Lab 56 - Handling JSON Data](Lab%2056/)
 - [Lab 57 - Interacting with Databases - Using SQLite](Lab%2057/)
+- [Lab 58 - Querying and Filtering Data in SQLite](Lab%2058/)
 
 ## Proof of Completion — Daily Work Log
 
@@ -156,6 +157,18 @@ For Lab 57, run these commands from inside the Lab 57 directory:
     python3 data_insertion.py
     python3 data_queries.py --search John
     python3 data_updates.py
+    python3 -m unittest -v
+
+For Lab 58, run these commands from inside the Lab 58 directory:
+
+    python3 setup_database.py
+    python3 filtering_queries.py
+    python3 advanced_filtering.py
+    python3 sorting_limiting.py
+    python3 join_operations.py
+    python3 advanced_joins.py
+    python3 grouping_aggregation.py
+    python3 advanced_aggregation.py
     python3 -m unittest -v
 
 For Lab 41:
