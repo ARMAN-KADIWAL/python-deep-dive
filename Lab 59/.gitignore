@@ -1,0 +1,12 @@
+# Never commit personal data or generated artifacts
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+report_output.txt
