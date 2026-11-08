@@ -51,6 +51,7 @@ Python learning labs organized by lab number. Each lab folder contains runnable 
 - [Lab 56 - Handling JSON Data](Lab%2056/)
 - [Lab 57 - Interacting with Databases - Using SQLite](Lab%2057/)
 - [Lab 58 - Querying and Filtering Data in SQLite](Lab%2058/)
+- [Lab 59 - Integrating Databases with User Input](Lab%2059/)
 - [Lab 60 - Introduction to Pandas - Working with DataFrames](Lab%2060/)
 
 ## Proof of Completion — Daily Work Log
@@ -171,6 +172,14 @@ For Lab 58, run these commands from inside the Lab 58 directory:
     python3 grouping_aggregation.py
     python3 advanced_aggregation.py
     python3 -m unittest -v
+
+For Lab 59, run these commands from inside the Lab 59 directory:
+
+    python3 database_setup.py
+    python3 user_management.py
+    python3 security_demo.py
+    python3 -m unittest -v test_system.py
+    python3 database_report.py
 
 For Lab 60, run these commands from inside the Lab 60 directory:
 
