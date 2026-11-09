@@ -53,6 +53,7 @@ Python learning labs organized by lab number. Each lab folder contains runnable 
 - [Lab 58 - Querying and Filtering Data in SQLite](Lab%2058/)
 - [Lab 59 - Integrating Databases with User Input](Lab%2059/)
 - [Lab 60 - Introduction to Pandas - Working with DataFrames](Lab%2060/)
+- [Lab 61 - Data Cleaning with Pandas - Handling Missing Data](Lab%2061/)
 
 ## Proof of Completion — Daily Work Log
 
@@ -186,6 +187,12 @@ For Lab 60, run these commands from inside the Lab 60 directory:
     python3 -m pip install -r requirements.txt
     python3 pandas_lab.py
     python3 -m unittest -v
+
+For Lab 61, run these commands from inside the Lab 61 directory:
+
+    python3 -m pip install -r requirements.txt
+    python3 pandas_lab.py
+    python3 -m unittest -v test_pandas_lab.py
 
 For Lab 41:
 
