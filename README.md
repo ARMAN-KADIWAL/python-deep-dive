@@ -1,8 +1,21 @@
-# Python Deep Dive
+# Python Deep Dive 🐍
 
-Python learning labs organized by lab number. Each lab folder contains runnable Python examples and a README describing the concepts covered.
+<p align="center">
+  <img alt="Python learning labs" src="https://img.shields.io/badge/Learning-Python-3979AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img alt="Organized lab folders" src="https://img.shields.io/badge/Organized_Labs-51-5de6d4?style=for-the-badge&labelColor=17243b" />
+  <img alt="Topics" src="https://img.shields.io/badge/Topics-OOP_%7C_SQLite_%7C_Pandas-9987ff?style=for-the-badge&labelColor=17243b" />
+</p>
 
-## Available Labs
+A practical Python learning collection, organized by lab number — from syntax and algorithms to OOP, databases, and Pandas. Each lab folder contains runnable code and a README.
+
+> **Start here:** Pick a learning path below, open any lab folder, and follow that lab's README. For GitHub-linked proof of work, see the [daily tracker](#proof-of-completion--daily-work-log).
+
+## Learning paths
+
+Choose a topic below. Every linked lab has runnable examples and its own instructions.
+
+<details>
+<summary><strong>01 — Fundamentals & core data structures · 24 labs</strong></summary>
 
 - [Lab 6 - Variables and Data Types](Lab%206/)
 - [Lab 7 - Basic Operators](Lab%207/)
@@ -28,11 +41,23 @@ Python learning labs organized by lab number. Each lab folder contains runnable 
 - [Lab 27 - Reading and Writing JSON Files](Lab%2027/)
 - [Lab 28 - Advanced File I/O and Context Managers](Lab%2028/)
 - [Lab 29 - Data Structures and File I/O Final Project](Lab%2029/)
+
+</details>
+
+<details>
+<summary><strong>02 — Packages & standard library · 5 labs</strong></summary>
+
 - [Lab 31 - Importing Modules and Standard Libraries](Lab%2031/)
 - [Lab 32 - Creating and Using Python Packages](Lab%2032/)
 - [Lab 33 - Exploring the Python Standard Library](Lab%2033/)
 - [Lab 34 - Advanced Package Usage](Lab%2034/)
 - [Lab 35 - Final Project: Building a Package with Python](Lab%2035/)
+
+</details>
+
+<details>
+<summary><strong>03 — Object-oriented Python · 8 labs</strong></summary>
+
 - [Lab 36 - Introduction to Classes and Objects](Lab%2036/)
 - [Lab 37 - Constructor and Initialization: Using __init__](Lab%2037/)
 - [Lab 38 - Methods and Functions: Defining and Calling Methods](Lab%2038/)
@@ -41,6 +66,12 @@ Python learning labs organized by lab number. Each lab folder contains runnable 
 - [Lab 41 - Encapsulation: Getters, Setters, and Properties](Lab%2041/)
 - [Lab 47 - Multiple Inheritance](Lab%2047/)
 - [Lab 48 - Final Project: OOP Library Management System](Lab%2048/)
+
+</details>
+
+<details>
+<summary><strong>04 — Advanced Python & file handling · 8 labs</strong></summary>
+
 - [Lab 49 - Introduction to Python Decorators](Lab%2049/)
 - [Lab 50 - Understanding Python Generators](Lab%2050/)
 - [Lab 51 - Context Managers](Lab%2051/)
@@ -49,12 +80,20 @@ Python learning labs organized by lab number. Each lab folder contains runnable 
 - [Lab 54 - Reading and Writing Files](Lab%2054/)
 - [Lab 55 - Handling CSV Data](Lab%2055/)
 - [Lab 56 - Handling JSON Data](Lab%2056/)
+
+</details>
+
+<details open>
+<summary><strong>05 — Databases, SQLite & Pandas · 6 labs</strong></summary>
+
 - [Lab 57 - Interacting with Databases - Using SQLite](Lab%2057/)
 - [Lab 58 - Querying and Filtering Data in SQLite](Lab%2058/)
 - [Lab 59 - Integrating Databases with User Input](Lab%2059/)
 - [Lab 60 - Introduction to Pandas - Working with DataFrames](Lab%2060/)
 - [Lab 61 - Data Cleaning with Pandas - Handling Missing Data](Lab%2061/)
 - [Lab 62 - Advanced Pandas Operations - Merging and Grouping Data](Lab%2062/)
+
+</details>
 
 ## Proof of Completion — Daily Work Log
 
