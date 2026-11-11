@@ -1,0 +1,6 @@
+,Product_A_Sales,Product_B_Sales,Product_C_Sales,Marketing_Spend,Customer_Count
+Product_A_Sales,1.0,-0.713,0.0,0.076,-0.543
+Product_B_Sales,-0.713,1.0,0.029,-0.282,0.59
+Product_C_Sales,0.0,0.029,1.0,-0.242,-0.252
+Marketing_Spend,0.076,-0.282,-0.242,1.0,-0.185
+Customer_Count,-0.543,0.59,-0.252,-0.185,1.0
