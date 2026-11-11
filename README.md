@@ -2,7 +2,7 @@
 
 <p align="center">
   <img alt="Python learning labs" src="https://img.shields.io/badge/Learning-Python-3979AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img alt="Organized lab folders" src="https://img.shields.io/badge/Organized_Labs-51-5de6d4?style=for-the-badge&labelColor=17243b" />
+  <img alt="Organized lab folders" src="https://img.shields.io/badge/Organized_Labs-52-5de6d4?style=for-the-badge&labelColor=17243b" />
   <img alt="Topics" src="https://img.shields.io/badge/Topics-OOP_%7C_SQLite_%7C_Pandas-9987ff?style=for-the-badge&labelColor=17243b" />
 </p>
 
@@ -84,7 +84,7 @@ Choose a topic below. Every linked lab has runnable examples and its own instruc
 </details>
 
 <details open>
-<summary><strong>05 — Databases, SQLite & Pandas · 6 labs</strong></summary>
+<summary><strong>05 — Databases, SQLite, Pandas & Visualization · 7 labs</strong></summary>
 
 - [Lab 57 - Interacting with Databases - Using SQLite](Lab%2057/)
 - [Lab 58 - Querying and Filtering Data in SQLite](Lab%2058/)
@@ -92,6 +92,7 @@ Choose a topic below. Every linked lab has runnable examples and its own instruc
 - [Lab 60 - Introduction to Pandas - Working with DataFrames](Lab%2060/)
 - [Lab 61 - Data Cleaning with Pandas - Handling Missing Data](Lab%2061/)
 - [Lab 62 - Advanced Pandas Operations - Merging and Grouping Data](Lab%2062/)
+- [Lab 63 - Data Visualization with Pandas and Matplotlib](Lab%2063/)
 
 </details>
 
@@ -239,6 +240,12 @@ For Lab 62, run these commands from inside the Lab 62 directory:
     python3 -m pip install -r requirements.txt
     python3 lab_62.py
     python3 -m unittest -v test_lab_62.py
+
+For Lab 63, run these commands from inside the Lab 63 directory:
+
+    python3 -m pip install -r requirements.txt
+    python3 lab_63.py
+    python3 -m unittest -v test_lab_63.py
 
 For Lab 41:
 

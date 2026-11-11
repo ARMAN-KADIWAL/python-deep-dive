@@ -1,0 +1,43 @@
+name: Lab 63 — Charts and Export Validation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Lab 63/**"
+      - ".github/workflows/lab63-validation.yml"
+  pull_request:
+    paths:
+      - "Lab 63/**"
+      - ".github/workflows/lab63-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-lab-63:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "Lab 63"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: "Lab 63/requirements.txt"
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Run unit and export tests
+        run: python -m unittest -v test_lab_63.py
+      - name: Generate shareable reports
+        run: python lab_63.py --output-dir outputs --dpi 160
+      - name: Upload generated charts and dashboards
+        uses: actions/upload-artifact@v4
+        with:
+          name: lab63-visualization-outputs
+          path: "Lab 63/outputs/"
+          if-no-files-found: error
+          retention-days: 30
