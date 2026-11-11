@@ -1,0 +1,8 @@
+2026-10-15T10:00:00Z INFO service=orders request started
+2026-10-15T10:00:10Z ERROR service=orders database connection refused
+2026-10-15T10:00:20Z ERROR service=orders database connection refused
+2026-10-15T10:00:30Z ERROR service=orders database connection refused
+2026-10-15T10:00:40Z ERROR service=orders database connection pool exhausted
+2026-10-15T10:00:50Z CRITICAL service=orders database connection pool exhausted
+2026-10-15T10:01:00Z ERROR service=orders database connection refused
+2026-10-15T10:02:00Z INFO service=orders retry succeeded

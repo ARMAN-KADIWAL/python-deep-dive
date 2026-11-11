@@ -1,0 +1,18 @@
+services:
+  devops-ai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ai-powered-devops-engineer:local
+    ports:
+      - "127.0.0.1:8501:8501"
+    environment:
+      STREAMLIT_BROWSER_GATHER_USAGE_STATS: "false"
+      DEVOPS_AI_BEDROCK_ENABLED: "false"
+    init: true
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    # No host Docker socket, credentials, or broad host filesystem mounts.
