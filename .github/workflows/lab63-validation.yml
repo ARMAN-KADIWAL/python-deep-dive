@@ -1,10 +1,12 @@
-name: Lab 63 — Charts and Export Validation
+name: Lab 63 — Validate and Publish Proof
 
 on:
   push:
     branches: [main]
     paths:
-      - "Lab 63/**"
+      - "Lab 63/lab_63.py"
+      - "Lab 63/test_lab_63.py"
+      - "Lab 63/requirements.txt"
       - ".github/workflows/lab63-validation.yml"
   pull_request:
     paths:
@@ -13,14 +15,15 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: lab63-proof
+  cancel-in-progress: false
 
 jobs:
-  test-lab-63:
+  validate-and-publish:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: "Lab 63"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -29,15 +32,31 @@ jobs:
           cache: pip
           cache-dependency-path: "Lab 63/requirements.txt"
       - name: Install dependencies
-        run: python -m pip install -r requirements.txt
-      - name: Run unit and export tests
+        run: python -m pip install -r "Lab 63/requirements.txt"
+      - name: Run source and export tests
+        working-directory: "Lab 63"
         run: python -m unittest -v test_lab_63.py
-      - name: Generate shareable reports
-        run: python lab_63.py --output-dir outputs --dpi 160
-      - name: Upload generated charts and dashboards
+      - name: Produce Lab 63 proof from submitted source
+        working-directory: "Lab 63/proof"
+        run: python ../lab_63.py
+      - name: Check proof file count
+        working-directory: "Lab 63/proof"
+        run: |
+          python -c "from pathlib import Path; e=['product_a_sales.png','all_products_sales.png','annual_sales_bar.png','marketing_spend_barh.png','customized_line_chart.png','customized_bar_chart.png','histograms.png','scatter_plots.png','correlation_matrix.csv','correlation_heatmaps.png','correlation_strengths.png','sales_dashboard.png','sales_dashboard.jpg','sales_dashboard.pdf','monthly_sales_trends.png','marketing_effectiveness.png','sales_distributions.png']; missing=[x for x in e if not Path(x).is_file() or Path(x).stat().st_size==0]; assert not missing, missing; print('Verified',len(e),'proof files')"
+      - name: Commit generated proof images and PDF
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f "Lab 63/proof/"
+          if ! git diff --cached --quiet; then
+            git commit -m "Add Lab 63 PNG JPG PDF and correlation CSV proof"
+            git push origin HEAD:main
+          fi
+      - name: Upload proof files as workflow artifact
         uses: actions/upload-artifact@v4
         with:
-          name: lab63-visualization-outputs
-          path: "Lab 63/outputs/"
+          name: lab63-proof-outputs
+          path: "Lab 63/proof/"
           if-no-files-found: error
           retention-days: 30

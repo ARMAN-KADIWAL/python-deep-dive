@@ -3,3 +3,7 @@ outputs/
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
+/*.png
+/*.jpg
+/*.pdf
+/correlation_matrix.csv

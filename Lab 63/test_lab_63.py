@@ -1,65 +1,80 @@
-"""Automated checks for Lab 63's synthetic data and exported charts."""
+import io
 import subprocess
 import sys
 import tempfile
+import tokenize
 import unittest
 from pathlib import Path
 
 import numpy as np
-
-from lab_63 import COLUMNS, EXPECTED_FILES, PRODUCTS, make_sales_data
+import pandas as pd
 
 SCRIPT = Path(__file__).with_name("lab_63.py")
+EXPECTED = {
+    "product_a_sales.png", "all_products_sales.png", "annual_sales_bar.png",
+    "marketing_spend_barh.png", "customized_line_chart.png",
+    "customized_bar_chart.png", "histograms.png", "scatter_plots.png",
+    "correlation_matrix.csv", "correlation_heatmaps.png",
+    "correlation_strengths.png", "sales_dashboard.png", "sales_dashboard.jpg",
+    "sales_dashboard.pdf", "monthly_sales_trends.png",
+    "marketing_effectiveness.png", "sales_distributions.png",
+}
 
 
 class Lab63Tests(unittest.TestCase):
-    def test_sample_data_is_reproducible(self):
-        first = make_sales_data()
-        second = make_sales_data()
-        self.assertTrue(first.equals(second))
-        self.assertEqual(first.shape, (12, 6))
-        self.assertEqual(first["Month"].iloc[0], "Jan")
-        self.assertEqual(int(first[PRODUCTS[0]].iloc[0]), 4174)
-        self.assertFalse(first.isna().any().any())
-
-    def test_correlation_matrix_properties(self):
-        corr = make_sales_data()[COLUMNS].corr()
-        self.assertEqual(corr.shape, (5, 5))
-        self.assertTrue(np.allclose(corr, corr.T))
-        self.assertTrue(np.allclose(np.diag(corr), 1.0))
-        self.assertTrue((corr.abs() <= 1.00000001).all().all())
-
-    def test_dpi_validation(self):
-        process = subprocess.run(
-            [sys.executable, str(SCRIPT), "--dpi", "10"],
-            capture_output=True, text=True, timeout=30
+    @classmethod
+    def setUpClass(cls):
+        cls.directory = tempfile.TemporaryDirectory(prefix="lab63-check-")
+        cls.folder = Path(cls.directory.name)
+        cls.process = subprocess.run(
+            [sys.executable, str(SCRIPT)],
+            cwd=cls.folder,
+            text=True,
+            capture_output=True,
+            timeout=180,
+            check=False,
         )
-        self.assertNotEqual(process.returncode, 0)
-        self.assertIn("--dpi must be", process.stderr)
 
-    def test_end_to_end_exports(self):
-        with tempfile.TemporaryDirectory() as temporary:
-            process = subprocess.run(
-                [sys.executable, str(SCRIPT),
-                 "--output-dir", temporary, "--dpi", "72"],
-                capture_output=True, text=True, timeout=180
-            )
-            self.assertEqual(process.returncode, 0,
-                             msg=process.stdout + process.stderr)
-            self.assertIn("SUCCESS: 18 output files verified",
-                          process.stdout)
-            found = {p.name for p in Path(temporary).iterdir()}
-            self.assertEqual(found, set(EXPECTED_FILES))
-            magic = {".png": b"\x89PNG", ".jpg": b"\xff\xd8",
-                     ".pdf": b"%PDF"}
-            for name in EXPECTED_FILES:
-                path = Path(temporary) / name
-                self.assertGreater(path.stat().st_size, 50)
-                if path.suffix in magic:
-                    self.assertTrue(
-                        path.read_bytes().startswith(magic[path.suffix]),
-                        msg=name
-                    )
+    @classmethod
+    def tearDownClass(cls):
+        cls.directory.cleanup()
+
+    def test_script_has_no_comment_tokens(self):
+        source = SCRIPT.read_text(encoding="utf-8")
+        tokens = tokenize.generate_tokens(io.StringIO(source).readline)
+        comments = [token for token in tokens if token.type == tokenize.COMMENT]
+        self.assertEqual(comments, [])
+
+    def test_script_executes_successfully(self):
+        self.assertEqual(
+            self.process.returncode, 0,
+            msg=self.process.stdout + self.process.stderr,
+        )
+        self.assertIn("LAB 63 TASK 6 COMPLETED!", self.process.stdout)
+
+    def test_exact_expected_outputs(self):
+        self.assertEqual({item.name for item in self.folder.iterdir()}, EXPECTED)
+        self.assertEqual(len(EXPECTED), 17)
+
+    def test_files_have_valid_signatures(self):
+        signatures = {".png": b"\x89PNG\r\n\x1a\n", ".jpg": b"\xff\xd8",
+                      ".pdf": b"%PDF-"}
+        for name in EXPECTED:
+            path = self.folder / name
+            self.assertGreater(path.stat().st_size, 50, msg=name)
+            if path.suffix in signatures:
+                self.assertTrue(path.read_bytes().startswith(signatures[path.suffix]),
+                                msg=name)
+
+    def test_correlation_is_symmetric_and_expected(self):
+        matrix = pd.read_csv(self.folder / "correlation_matrix.csv", index_col=0)
+        self.assertEqual(matrix.shape, (5, 5))
+        self.assertTrue(np.allclose(matrix, matrix.T))
+        self.assertTrue(np.allclose(np.diag(matrix), 1.0))
+        self.assertAlmostEqual(
+            float(matrix.loc["Product_A_Sales", "Product_B_Sales"]),
+            -0.713, delta=0.002,
+        )
 
 
 if __name__ == "__main__":
