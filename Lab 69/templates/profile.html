@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Profile | Flask Auth Lab{% endblock %}
+{% block content %}
+  <h1>Your Profile</h1>
+  <div class="info-card">
+    <p><strong>Username:</strong> {{ current_user.username }}</p>
+    <p><strong>Email:</strong> {{ current_user.email }}</p>
+    <p><strong>User ID:</strong> {{ current_user.id }}</p>
+    <p><strong>Authentication:</strong> Active</p>
+  </div>
+  <a class="btn" href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+{% endblock %}

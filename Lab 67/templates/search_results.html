@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Results for {{ query }} · Flask Lab 67{% endblock %}
+{% block content %}
+  <h1>Search Results</h1>
+  <p><strong>Query:</strong> "{{ query }}"</p>
+  <p><strong>Category:</strong> {{ "All Categories" if category == "all" else category|title }}</p>
+  <p><strong>Results Found:</strong> {{ total_results }}</p>
+  <a class="btn" href="{{ url_for('search') }}">New Search</a>
+  {% if category != "all" %}
+    <a class="btn" href="{{ url_for('search_results', q=query, category='all') }}">All Categories</a>
+  {% endif %}
+
+  {% if results %}
+    {% for item in results %}
+      <article class="card">
+        <h2><a href="{{ url_for('view_item', item_id=item.id) }}">{{ item.title }}</a></h2>
+        <span class="tag">{{ item.category|title }}</span>
+        <p>By {{ item.author }}</p>
+        <p>{{ item.content }}</p>
+        <a href="{{ url_for('view_item', item_id=item.id) }}">Read More</a>
+      </article>
+    {% endfor %}
+    <section class="card">
+      <h2>Results Summary</h2>
+      {% set tutorial_count = results|selectattr("category", "equalto", "tutorial")|list|length %}
+      {% set news_count = results|selectattr("category", "equalto", "news")|list|length %}
+      <ul>
+        <li>Total Results: {{ total_results }}</li>
+        <li>Tutorials: {{ tutorial_count }}</li>
+        <li>News Articles: {{ news_count }}</li>
+      </ul>
+    </section>
+  {% else %}
+    <section class="card">
+      <h2>No Results Found</h2>
+      <p>Try different keywords, check spelling, or search all categories.</p>
+    </section>
+  {% endif %}
+{% endblock %}

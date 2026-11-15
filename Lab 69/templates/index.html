@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Home | Flask Auth Lab{% endblock %}
+{% block content %}
+  <h1>Flask Authentication Lab</h1>
+  <p>Welcome! This project demonstrates registration, login, password hashing, sessions, and protected pages.</p>
+  {% if current_user.is_authenticated %}
+    <p>You are logged in as <strong>{{ current_user.username }}</strong>.</p>
+    <a class="btn" href="{{ url_for('dashboard') }}">Open Dashboard</a>
+  {% else %}
+    <a class="btn" href="{{ url_for('register') }}">Create Account</a>
+    <a class="btn secondary" href="{{ url_for('login') }}">Login</a>
+  {% endif %}
+{% endblock %}

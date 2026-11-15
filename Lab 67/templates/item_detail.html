@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}{{ item.title }} · Flask Lab 67{% endblock %}
+{% block content %}
+  <h1>{{ item.title }}</h1>
+  <span class="tag">{{ item.category|title }}</span>
+  <p>By {{ item.author }} · {{ item.date }}</p>
+  <p>{{ item.content }}</p>
+  <a class="btn" href="{{ url_for('search') }}">Back to Search</a>
+{% endblock %}

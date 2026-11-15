@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ user.name }} · Profile{% endblock %}
+{% block content %}
+  <h1>Profile: {{ user.name }}</h1>
+  <p><strong>Email:</strong> {{ user.email }}</p>
+  <p><strong>Joined:</strong> {{ user.joined_date }}</p>
+  {% if user.is_active %}
+    <span class="tag">Active User</span>
+  {% else %}
+    <span class="tag muted">Inactive User</span>
+  {% endif %}
+  <p>Data is illustrative and generated for this lab.</p>
+{% endblock %}

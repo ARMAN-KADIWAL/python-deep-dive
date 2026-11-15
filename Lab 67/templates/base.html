@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Flask Templates Lab{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <nav>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('user_profile', username='Arman') }}">Profile</a>
+    <a href="{{ url_for('users_list') }}">Users</a>
+    <a href="{{ url_for('active_users') }}">Active Users</a>
+    <a href="{{ url_for('search') }}">Search</a>
+  </nav>
+  <main class="container">{% block content %}{% endblock %}</main>
+  <footer>Flask Lab 67 · Jinja template rendering</footer>
+</body>
+</html>

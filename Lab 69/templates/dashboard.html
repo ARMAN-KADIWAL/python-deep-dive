@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Dashboard | Flask Auth Lab{% endblock %}
+{% block content %}
+  <h1>Dashboard</h1>
+  <p>Welcome, <strong>{{ current_user.username }}</strong>!</p>
+  <p>This page is protected by <code>@login_required</code>.</p>
+  <div class="info-card">
+    <p><strong>User ID:</strong> {{ current_user.id }}</p>
+    <p><strong>Email:</strong> {{ current_user.email }}</p>
+  </div>
+  <a class="btn" href="{{ url_for('profile') }}">View Profile</a>
+{% endblock %}

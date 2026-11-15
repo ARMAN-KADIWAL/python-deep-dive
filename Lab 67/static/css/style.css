@@ -1,0 +1,15 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f2f6fb; color: #21314a; font: 16px/1.6 system-ui, sans-serif; }
+nav { display: flex; gap: 20px; flex-wrap: wrap; padding: 16px 24px; background: #16385e; }
+nav a { color: white; text-decoration: none; }
+.container { max-width: 850px; padding: 30px; margin: 32px auto; background: white; border-radius: 14px; }
+h1, h2 { color: #183b64; }
+h2 { font-size: 1.2rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
+.card { padding: 18px; margin: 16px 0; background: #f5f8fc; border: 1px solid #dce5ef; border-radius: 10px; }
+.tag { background: #daf2e4; color: #176b3b; padding: 3px 9px; border-radius: 15px; font-size: 0.85rem; }
+.tag.muted { color: #5a6576; background: #e5e7eb; }
+.btn { display: inline-block; margin: 9px 9px 9px 0; padding: 9px 15px; border: 0; border-radius: 7px; background: #1b65a8; color: white; text-decoration: none; cursor: pointer; }
+label { display: block; font-weight: bold; margin: 12px 0 5px; }
+input, select { width: 100%; padding: 11px; border: 1px solid #aab9cc; border-radius: 6px; }
+footer { text-align: center; color: #56657b; padding: 20px; }

@@ -2,8 +2,8 @@
 
 <p align="center">
   <img alt="Python learning labs" src="https://img.shields.io/badge/Learning-Python-3979AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img alt="Organized lab folders" src="https://img.shields.io/badge/Organized_Labs-52-5de6d4?style=for-the-badge&labelColor=17243b" />
-  <img alt="Topics" src="https://img.shields.io/badge/Topics-OOP_%7C_SQLite_%7C_Pandas-9987ff?style=for-the-badge&labelColor=17243b" />
+  <img alt="Organized lab folders" src="https://img.shields.io/badge/Organized_Labs-57-5de6d4?style=for-the-badge&labelColor=17243b" />
+  <img alt="Topics" src="https://img.shields.io/badge/Topics-OOP_%7C_SQLite_%7C_Pandas_%7C_Flask-9987ff?style=for-the-badge&labelColor=17243b" />
 </p>
 
 A practical Python learning collection, organized by lab number — from syntax and algorithms to OOP, databases, and Pandas. Each lab folder contains runnable code and a README.
@@ -93,6 +93,19 @@ Choose a topic below. Every linked lab has runnable examples and its own instruc
 - [Lab 61 - Data Cleaning with Pandas - Handling Missing Data](Lab%2061/)
 - [Lab 62 - Advanced Pandas Operations - Merging and Grouping Data](Lab%2062/)
 - [Lab 63 - Data Visualization with Pandas and Matplotlib](Lab%2063/)
+
+</details>
+
+<details open>
+<summary><strong>06 — Flask web development · 5 labs</strong></summary>
+
+- [Lab 65 - Introduction to Flask: Building Your First Web App](Lab%2065/)
+- [Lab 66 - RESTful APIs with Flask](Lab%2066/)
+- [Lab 67 - Template Rendering with Flask](Lab%2067/)
+- [Lab 68 - Flask Web Forms and Data Handling](Lab%2068/)
+- [Lab 69 - User Authentication with Flask](Lab%2069/)
+
+Each project includes runnable code, a requirements file, automated tests, and detailed instructions. Lab 67 and Lab 68 include independently reconstructed endings because their supplied handouts were truncated.
 
 </details>
 

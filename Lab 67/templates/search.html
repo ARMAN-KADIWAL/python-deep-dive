@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Search · Flask Lab 67{% endblock %}
+{% block content %}
+  <h1>Search Content</h1>
+  <p>Search tutorials and news by title, author, or content.</p>
+  <form action="{{ url_for('search_results') }}" method="get">
+    <label for="q">Keywords</label>
+    <input id="q" name="q" placeholder="e.g. Flask" required>
+    <label for="category">Category</label>
+    <select id="category" name="category">
+      <option value="all">All Categories</option>
+      <option value="tutorial">Tutorials</option>
+      <option value="news">News</option>
+    </select>
+    <button class="btn" type="submit">Search</button>
+  </form>
+{% endblock %}

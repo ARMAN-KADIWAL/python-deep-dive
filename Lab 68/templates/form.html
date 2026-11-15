@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Submit Form · Lab 68{% endblock %}
+{% block content %}
+  <h1>Registration & Feedback Form</h1>
+  <p>Fields marked * are required. Data is saved locally for lab practice.</p>
+  <form method="post" action="{{ url_for('submit_form') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <label for="first_name">First Name *</label>
+    <input id="first_name" name="first_name" required minlength="2">
+    <label for="last_name">Last Name *</label>
+    <input id="last_name" name="last_name" required minlength="2">
+    <label for="email">Email *</label>
+    <input id="email" name="email" type="email" required>
+    <label for="phone">Phone (123-456-7890)</label>
+    <input id="phone" name="phone" placeholder="123-456-7890">
+    <label for="age">Age (13–120)</label>
+    <input id="age" name="age" type="number" min="13" max="120">
+    <label for="country">Country *</label>
+    <select id="country" name="country" required>
+      <option value="">Choose country</option>
+      <option value="India">India</option>
+      <option value="United Kingdom">United Kingdom</option>
+      <option value="United States">United States</option>
+      <option value="Other">Other</option>
+    </select>
+    <fieldset>
+      <legend>Interests</legend>
+      <label class="choice"><input type="checkbox" name="interests" value="Python"> Python</label>
+      <label class="choice"><input type="checkbox" name="interests" value="Web Development"> Web Development</label>
+      <label class="choice"><input type="checkbox" name="interests" value="Data Science"> Data Science</label>
+    </fieldset>
+    <label for="message">Message (at least 10 characters) *</label>
+    <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+    <label class="choice"><input type="checkbox" name="newsletter" value="yes"> Subscribe to newsletter</label>
+    <button class="btn" type="submit">Submit Form</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}All Submissions · Lab 68{% endblock %}
+{% block content %}
+  <h1>Saved Submissions</h1>
+  <p>Total: {{ submissions|length }}</p>
+  {% if submissions %}
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Name</th><th>Email</th><th>Time</th><th>Details</th></tr></thead>
+        <tbody>
+        {% for submission in submissions %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ submission.first_name }} {{ submission.last_name }}</td>
+            <td>{{ submission.email }}</td>
+            <td>{{ submission.submission_time }}</td>
+            <td><a href="{{ url_for('view_submission', index=loop.index0) }}">View</a></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <a class="btn" href="{{ url_for('export_submissions') }}">Export CSV</a>
+    <form method="post" action="{{ url_for('clear_submissions') }}" class="inline-form"
+          onsubmit="return confirm('Permanently delete all saved lab submissions?');">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <button class="btn danger" type="submit">Clear All</button>
+    </form>
+  {% else %}
+    <p>No saved submissions yet.</p>
+  {% endif %}
+{% endblock %}

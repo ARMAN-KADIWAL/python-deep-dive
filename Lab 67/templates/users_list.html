@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Users · Flask Lab 67{% endblock %}
+{% block content %}
+  <h1>{{ filter_type }}</h1>
+  <p><strong>Total:</strong> {{ users|length }}</p>
+  <div class="grid">
+    {% for user in users %}
+      <article class="card">
+        <h2>{{ user.name }}</h2>
+        <p>{{ user.email }}</p>
+        <p>Role: <strong>{{ user.role }}</strong> · Posts: {{ user.posts_count }}</p>
+        {% if user.is_active %}
+          <span class="tag">Active</span>
+        {% else %}
+          <span class="tag muted">Inactive</span>
+        {% endif %}
+      </article>
+    {% else %}
+      <p>No users found.</p>
+    {% endfor %}
+  </div>
+  <a class="btn" href="{{ url_for('users_list') }}">All Users</a>
+  <a class="btn" href="{{ url_for('active_users') }}">Active Only</a>
+{% endblock %}

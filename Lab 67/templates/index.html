@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Home · Flask Lab 67{% endblock %}
+{% block content %}
+  <h1>{{ title }}</h1>
+  <p>Learn template inheritance, variables, loops, conditionals, and search results.</p>
+  <a class="btn" href="{{ url_for('users_list') }}">Browse Users</a>
+  <a class="btn" href="{{ url_for('search') }}">Try Search</a>
+{% endblock %}
