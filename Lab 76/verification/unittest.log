@@ -1,0 +1,11 @@
+
+test_both_counter_lock_styles (test_lab76.SynchronizationTests.test_both_counter_lock_styles) ... ok
+test_bounded_buffer_transfers_every_item_once (test_lab76.SynchronizationTests.test_bounded_buffer_transfers_every_item_once) ... ok
+test_invalid_buffer_capacity (test_lab76.SynchronizationTests.test_invalid_buffer_capacity) ... ok
+test_timeout_releases_first_lock (test_lab76.SynchronizationTests.test_timeout_releases_first_lock) ... ok
+test_try_lock_exhaustion_is_reported (test_lab76.SynchronizationTests.test_try_lock_exhaustion_is_reported) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.473s
+
+OK

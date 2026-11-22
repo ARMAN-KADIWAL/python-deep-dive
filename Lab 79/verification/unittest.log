@@ -1,0 +1,17 @@
+Async: 0 succeeded; 1 failed
+Sync: 0 succeeded; 1 failed
+
+test_missing_title_and_empty_anchor (test_lab79.ParserTests.test_missing_title_and_empty_anchor) ... ok
+test_async_and_sync_extract_identical_fields (test_lab79.ScraperTests.test_async_and_sync_extract_identical_fields) ... ok
+test_comparison_requires_full_url_coverage (test_lab79.ScraperTests.test_comparison_requires_full_url_coverage) ... ok
+test_context_manager_required (test_lab79.ScraperTests.test_context_manager_required) ... ok
+test_http_404_is_not_retried (test_lab79.ScraperTests.test_http_404_is_not_retried) ... ok
+test_invalid_configuration (test_lab79.ScraperTests.test_invalid_configuration) ... ok
+test_parse_error_status (test_lab79.ScraperTests.test_parse_error_status) ... ok
+test_timeout_status (test_lab79.ScraperTests.test_timeout_status) ... ok
+test_transient_failure_is_retried (test_lab79.ScraperTests.test_transient_failure_is_retried) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.495s
+
+OK

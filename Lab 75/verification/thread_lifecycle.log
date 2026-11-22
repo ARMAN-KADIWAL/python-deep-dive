@@ -1,0 +1,33 @@
+=== Thread Lifecycle Demonstration ===
+Thread created. Is alive? False
+Background-Task started
+Background-Task working... step 1/5
+Thread started. Is alive? True
+Background-Task working... step 2/5
+Thread running. Is alive? True
+Background-Task working... step 3/5
+Background-Task working... step 4/5
+Background-Task working... step 5/5
+Background-Task completed
+Thread joined. Is alive? False
+
+=== Thread Timeout Example ===
+Timeout-Task started
+Timeout-Task working... step 1/10
+Waiting for thread to complete (timeout: 3 seconds)...
+Timeout-Task working... step 2/10
+Timeout-Task working... step 3/10
+Thread is still running after timeout
+Continuing with other work...
+Timeout-Task working... step 4/10
+Timeout-Task working... step 5/10
+Other work completed
+Now waiting for thread to fully complete...
+Timeout-Task working... step 6/10
+Timeout-Task working... step 7/10
+Timeout-Task working... step 8/10
+Timeout-Task working... step 9/10
+Timeout-Task working... step 10/10
+Timeout-Task completed
+Thread finally completed
+

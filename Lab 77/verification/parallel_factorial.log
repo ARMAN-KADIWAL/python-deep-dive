@@ -1,0 +1,12 @@
+10! | math.factorial: 0.0002s | verified=True
+10! | Process pool: 0.1348s | verified=True
+10! | Queue-based: 0.0880s | verified=True
+100! | math.factorial: 0.0000s | verified=True
+100! | Process pool: 0.0759s | verified=True
+100! | Queue-based: 0.0805s | verified=True
+1000! | math.factorial: 0.0001s | verified=True
+1000! | Process pool: 0.0844s | verified=True
+1000! | Queue-based: 0.0884s | verified=True
+PASS: All factorial methods agree with math.factorial.
+The queue-based method name is retained from the handout; it is not guaranteed to be faster.
+

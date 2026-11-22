@@ -1,0 +1,50 @@
+name: Python Labs 75-82 validation
+
+on:
+  push:
+    paths:
+      - 'Lab 75/**'
+      - 'Lab 76/**'
+      - 'Lab 77/**'
+      - 'Lab 78/**'
+      - 'Lab 79/**'
+      - 'Lab 80/**'
+      - 'Lab 81/**'
+      - 'Lab 82/**'
+      - 'validate_labs75_82.py'
+      - 'requirements-labs75-82.txt'
+      - '.github/workflows/labs75-82-validation.yml'
+  pull_request:
+    paths:
+      - 'Lab 75/**'
+      - 'Lab 76/**'
+      - 'Lab 77/**'
+      - 'Lab 78/**'
+      - 'Lab 79/**'
+      - 'Lab 80/**'
+      - 'Lab 81/**'
+      - 'Lab 82/**'
+      - 'validate_labs75_82.py'
+      - 'requirements-labs75-82.txt'
+      - '.github/workflows/labs75-82-validation.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install lab dependencies
+        run: python -m pip install -r requirements-labs75-82.txt
+      - name: Validate syntax, behavior, integration and examples
+        run: python validate_labs75_82.py --smoke

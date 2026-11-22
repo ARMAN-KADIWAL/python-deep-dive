@@ -1,0 +1,17 @@
+PASS: Bidirectional queue results: [(0, 25), (1, 100), (2, 225), (3, 400), (4, 625)]
+PASS: Six produced items consumed exactly once.
+Shared array: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+Process 236 - A: 2 * 3 = 6
+Process 236 - B: 4 * 5 = 20
+
+test_bidirectional_queue_returns_all_squares (test_lab77.MultiprocessingTests.test_bidirectional_queue_returns_all_squares) ... ok
+test_factorial_invalid_arguments (test_lab77.MultiprocessingTests.test_factorial_invalid_arguments) ... ok
+test_factorial_methods_match_math (test_lab77.MultiprocessingTests.test_factorial_methods_match_math) ... ok
+test_queue_items_are_not_lost_or_duplicated (test_lab77.MultiprocessingTests.test_queue_items_are_not_lost_or_duplicated) ... ok
+test_shared_memory_result_and_cleanup (test_lab77.MultiprocessingTests.test_shared_memory_result_and_cleanup) ... ok
+test_starmap_worker_is_spawn_picklable (test_lab77.MultiprocessingTests.test_starmap_worker_is_spawn_picklable) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.626s
+
+OK

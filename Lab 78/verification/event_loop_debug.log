@@ -1,0 +1,17 @@
+I/O results: ['IO0', 'IO1', 'IO2']; 1.01s
+Intentional blocking example: slow-task warnings may appear.
+Blocking CPU task CPU0 starting
+Blocking CPU task CPU0 finished
+Blocking CPU task CPU1 starting
+Blocking CPU task CPU1 finished
+Blocking CPU task CPU2 starting
+Blocking CPU task CPU2 finished
+Process executor results: [333332833333500000, 333332833333500000, 333332833333500000]
+Executor elapsed: 0.31s
+PASS: CPU calculations completed outside the event-loop process.
+
+WARNING:asyncio:Executing <Task finished name='Task-5' coro=<cpu_bound_task() done, defined at /workspace/scratch/17eb0a77b8b3/python-deep-dive/Lab 78/event_loop_debug.py:12> result=333332833333500000 created at /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/tasks.py:695> took 0.079 seconds
+WARNING:asyncio:Executing <Task finished name='Task-6' coro=<cpu_bound_task() done, defined at /workspace/scratch/17eb0a77b8b3/python-deep-dive/Lab 78/event_loop_debug.py:12> result=333332833333500000 created at /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/tasks.py:695> took 0.074 seconds
+WARNING:asyncio:Executing <Task finished name='Task-7' coro=<cpu_bound_task() done, defined at /workspace/scratch/17eb0a77b8b3/python-deep-dive/Lab 78/event_loop_debug.py:12> result=333332833333500000 created at /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/tasks.py:695> took 0.079 seconds
+WARNING:asyncio:Executing <Task pending name='Task-1' coro=<main() running at /workspace/scratch/17eb0a77b8b3/python-deep-dive/Lab 78/event_loop_debug.py:58> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()] created at /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/tasks.py:712> cb=[_run_until_complete_cb() at /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py:181] created at /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py:100> took 0.025 seconds
+WARNING:asyncio:Executing <Task finished name='Task-1' coro=<main() done, defined at /workspace/scratch/17eb0a77b8b3/python-deep-dive/Lab 78/event_loop_debug.py:56> result=None created at /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py:100> took 0.023 seconds

@@ -1,0 +1,7 @@
+Worker 1: first lock acquired
+Worker 2: first lock acquired
+Worker 2: waiting for the other lock
+Worker 1: waiting for the other lock
+DEADLOCK DETECTED: terminating only the isolated demonstration process.
+PASS: Intentional deadlock detected and isolated process cleaned up.
+

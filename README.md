@@ -2,11 +2,11 @@
 
 <p align="center">
   <img alt="Python learning labs" src="https://img.shields.io/badge/Learning-Python-3979AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img alt="Organized lab folders" src="https://img.shields.io/badge/Organized_Labs-57-5de6d4?style=for-the-badge&labelColor=17243b" />
-  <img alt="Topics" src="https://img.shields.io/badge/Topics-OOP_%7C_SQLite_%7C_Pandas_%7C_Flask-9987ff?style=for-the-badge&labelColor=17243b" />
+  <img alt="Organized lab folders" src="https://img.shields.io/badge/Organized_Labs-75-5de6d4?style=for-the-badge&labelColor=17243b" />
+  <img alt="Topics" src="https://img.shields.io/badge/Topics-OOP_%7C_Data_%7C_Flask_%7C_Concurrency_%7C_Sockets-9987ff?style=for-the-badge&labelColor=17243b" />
 </p>
 
-A practical Python learning collection, organized by lab number — from syntax and algorithms to OOP, databases, and Pandas. Each lab folder contains runnable code and a README.
+A practical Python learning collection, organized by lab number — from syntax and algorithms to OOP, databases, data analysis, concurrency, and network applications. Each lab folder contains runnable code and a README.
 
 > **Start here:** Pick a learning path below, open any lab folder, and follow that lab's README. For GitHub-linked proof of work, see the [daily tracker](#proof-of-completion--daily-work-log).
 
@@ -108,6 +108,48 @@ Choose a topic below. Every linked lab has runnable examples and its own instruc
 Each project includes runnable code, a requirements file, automated tests, and detailed instructions. Lab 67 and Lab 68 include independently reconstructed endings because their supplied handouts were truncated.
 
 </details>
+
+<details open>
+<summary><strong>07 — Testing, debugging & TDD · 5 labs</strong></summary>
+
+- [Lab 70: Writing Unit Tests with unittest - Introduction to Unit Testing](Lab%2070/)
+- [Lab 71: Debugging Techniques and Tools - Introduction to Debugging](Lab%2071/)
+- [Lab 72: Advanced Debugging Techniques - Using IDE Debuggers](Lab%2072/)
+- [Lab 73: Test-Driven Development (TDD) - Writing Tests Before Code](Lab%2073/)
+- [Lab 74 - Full TDD Cycle: Sorting](Lab%2074/)
+
+</details>
+
+<details open>
+<summary><strong>08 — Threading, multiprocessing & asyncio · 5 labs</strong></summary>
+
+- [Lab 75: Introduction to Threading - Basic Threading in Python](Lab%2075/)
+- [Lab 76: Thread Synchronization - Managing Shared Resources with Locks](Lab%2076/)
+- [Lab 77: Multiprocessing in Python - Introduction to Multiprocessing](Lab%2077/)
+- [Lab 78: Asynchronous Programming with asyncio - Introduction to Asyncio](Lab%2078/)
+- [Lab 79: Advanced Asyncio -- Building an Async Web Scraper](Lab%2079/)
+
+</details>
+
+<details open>
+<summary><strong>09 — Sockets & multi-client applications · 3 labs</strong></summary>
+
+- [Lab 80: Socket Programming Basics - Introduction to Sockets](Lab%2080/)
+- [Lab 81: Building a Simple Client-Server Application](Lab%2081/)
+- [Lab 82: Multi-client Server with Threading](Lab%2082/)
+
+</details>
+
+## Verify Labs 75–82
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-labs75-82.txt
+python validate_labs75_82.py --smoke
+```
+
+The final implementations complete the supplied endings, integrate the server fragments, and include behavior/integration tests. HTTP checks run against controlled local fixtures; TCP/UDP checks use owned loopback servers. See [the recorded validation](progress/labs75-82-verification.json) for exact scope and results. Fresh runs write logs under `validation-output/`. CPU/I/O timings are workload-dependent measurements, not guaranteed speedups.
 
 ## Proof of Completion — Daily Work Log
 
@@ -268,3 +310,4 @@ For Lab 41:
     python3 encapsulation_demo.py
     python3 person_with_properties.py
     python3 -m unittest -v test_lab41.py
+

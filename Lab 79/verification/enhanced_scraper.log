@@ -1,0 +1,8 @@
+Total: 5; succeeded: 4; failed: 1
+success: http://127.0.0.1:38303/html; attempts=1; 0.038s; OK
+success: http://127.0.0.1:38303/json; attempts=1; 0.036s; OK
+success: http://127.0.0.1:38303/xml; attempts=1; 0.040s; OK
+http_error: http://127.0.0.1:38303/status/404; attempts=1; 0.037s; HTTP 404
+success: http://127.0.0.1:38303/uuid; attempts=1; 0.038s; OK
+PASS: Four successful requests and the intentional HTTP 404 were identified.
+

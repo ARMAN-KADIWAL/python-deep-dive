@@ -1,0 +1,31 @@
+=== Counter Without Lock Demo ===
+Starting with counter = 0
+Thread-1 starting...
+Thread-2 starting...
+Thread-1: Iteration 0, Counter = 1
+Thread-3 starting...
+Thread-2: Iteration 0, Counter = 1
+Thread-3: Iteration 0, Counter = 2
+Thread-3: Iteration 10000, Counter = 10002
+Thread-1: Iteration 10000, Counter = 10001
+Thread-2: Iteration 10000, Counter = 10001
+Thread-3: Iteration 20000, Counter = 20002
+Thread-1: Iteration 20000, Counter = 20001
+Thread-2: Iteration 20000, Counter = 20001
+Thread-3: Iteration 30000, Counter = 30002
+Thread-1: Iteration 30000, Counter = 30001
+Thread-2: Iteration 30000, Counter = 30001
+Thread-3: Iteration 40000, Counter = 40002
+Thread-1: Iteration 40000, Counter = 40001
+Thread-2: Iteration 40000, Counter = 40001
+Thread-3 finished. Final counter value seen: 50001
+Thread-1 finished. Final counter value seen: 50000
+Thread-2 finished. Final counter value seen: 50000
+
+=== Results ===
+Expected counter value: 150000
+Actual counter value: 50000
+Difference: 100000
+Execution time: 8.66 seconds
+❌ Race condition detected! Counter value is incorrect.
+

@@ -1,0 +1,3 @@
+PASS: Six produced items consumed exactly once.
+PASS: Bidirectional queue results: [(0, 25), (1, 100), (2, 225), (3, 400), (4, 625)]
+

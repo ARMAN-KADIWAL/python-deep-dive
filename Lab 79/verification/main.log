@@ -1,0 +1,22 @@
+Async: 8 succeeded; 0 failed
+Fixture /html | 2 links | 207 characters
+Fixture /json | 2 links | 207 characters
+Fixture /xml | 2 links | 206 characters
+Fixture /robots.txt | 2 links | 213 characters
+Fixture /headers | 2 links | 210 characters
+Fixture /ip | 2 links | 205 characters
+Fixture /user-agent | 2 links | 213 characters
+Fixture /uuid | 2 links | 207 characters
+Sync: 8 succeeded; 0 failed
+Fixture /html | 2 links | 207 characters
+Fixture /json | 2 links | 207 characters
+Fixture /xml | 2 links | 206 characters
+Fixture /robots.txt | 2 links | 213 characters
+Fixture /headers | 2 links | 210 characters
+Fixture /ip | 2 links | 205 characters
+Fixture /user-agent | 2 links | 213 characters
+Fixture /uuid | 2 links | 207 characters
+Sync: 0.280s; async: 0.062s; sync/async ratio: 4.55x
+A ratio above 1 means async was faster in this run; performance depends on workload and server.
+PASS: Both approaches fetched the complete identical URL list.
+

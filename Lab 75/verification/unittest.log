@@ -1,0 +1,12 @@
+
+test_bank_transactions_preserve_balance (test_lab75.ThreadingTests.test_bank_transactions_preserve_balance) ... ok
+test_cpu_calculation_against_closed_form (test_lab75.ThreadingTests.test_cpu_calculation_against_closed_form) ... ok
+test_invalid_bank_amounts_rejected (test_lab75.ThreadingTests.test_invalid_bank_amounts_rejected) ... ok
+test_locked_counter_has_no_lost_updates (test_lab75.ThreadingTests.test_locked_counter_has_no_lost_updates) ... ok
+test_resource_capacity_and_double_release (test_lab75.ThreadingTests.test_resource_capacity_and_double_release) ... ok
+test_worker_pool_processes_each_task_once (test_lab75.ThreadingTests.test_worker_pool_processes_each_task_once) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.762s
+
+OK

@@ -1,0 +1,55 @@
+=== Thread Synchronization Comparison ===
+
+=== Without Lock - 2 threads ===
+Threads: 2, Iterations per thread: 1000
+Expected: 2000
+Actual: 1001
+Accuracy: 50.05%
+Execution time: 0.086 seconds
+
+=== With Lock - 2 threads ===
+Threads: 2, Iterations per thread: 1000
+Expected: 2000
+Actual: 2000
+Accuracy: 100.00%
+Execution time: 0.176 seconds
+
+=== Without Lock - 3 threads ===
+Threads: 3, Iterations per thread: 2000
+Expected: 6000
+Actual: 2000
+Accuracy: 33.33%
+Execution time: 0.159 seconds
+
+=== With Lock - 3 threads ===
+Threads: 3, Iterations per thread: 2000
+Expected: 6000
+Actual: 6000
+Accuracy: 100.00%
+Execution time: 0.521 seconds
+
+=== Without Lock - 5 threads ===
+Threads: 5, Iterations per thread: 1000
+Expected: 5000
+Actual: 1000
+Accuracy: 20.00%
+Execution time: 0.090 seconds
+
+=== With Lock - 5 threads ===
+Threads: 5, Iterations per thread: 1000
+Expected: 5000
+Actual: 5000
+Accuracy: 100.00%
+Execution time: 0.479 seconds
+
+==================================================
+SUMMARY COMPARISON
+==================================================
+Average Accuracy Without Lock: 34.46%
+Average Accuracy With Lock: 100.00%
+Average Time Without Lock: 0.112 seconds
+Average Time With Lock: 0.392 seconds
+
+Performance Impact: 250.1% slower with locks
+Accuracy Improvement: 65.54 percentage points higher with locks
+

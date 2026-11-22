@@ -1,0 +1,46 @@
+=== Thread Safety with Locks ===
+Running safe increment with multiple threads...
+Thread-1: iteration 0, counter = 1
+Thread-2: iteration 0, counter = 2
+Thread-3: iteration 0, counter = 14
+Thread-1: iteration 1000, counter = 1472
+Thread-2: iteration 1000, counter = 3252
+Thread-3: iteration 1000, counter = 4509
+Thread-1: iteration 2000, counter = 4804
+Thread-2: iteration 2000, counter = 5858
+Thread-1: iteration 3000, counter = 7749
+Thread-3: iteration 2000, counter = 8062
+Thread-2: iteration 3000, counter = 8735
+Thread-1: iteration 4000, counter = 9852
+Thread-2: iteration 4000, counter = 11046
+Thread-3: iteration 3000, counter = 12203
+Thread-3: iteration 4000, counter = 14001
+
+Results:
+Expected counter value: 15000
+Actual counter value: 15000
+Difference: 0
+Execution time: 3.04 seconds
+✅ Thread synchronization successful! Counter value is correct.
+
+=== Bank Account Simulation ===
+Initial balance: $1000
+Alice withdrew $158. Balance: $1000 -> $842
+Bob deposited $134. Balance: $842 -> $976
+Charlie deposited $132. Balance: $976 -> $1108
+Alice withdrew $122. Balance: $1108 -> $986
+Bob deposited $145. Balance: $986 -> $1131
+Charlie deposited $97. Balance: $1131 -> $1228
+Alice deposited $190. Balance: $1228 -> $1418
+Bob deposited $120. Balance: $1418 -> $1538
+Alice withdrew $54. Balance: $1538 -> $1484
+Charlie deposited $110. Balance: $1484 -> $1594
+Bob deposited $152. Balance: $1594 -> $1746
+Alice withdrew $59. Balance: $1746 -> $1687
+Charlie deposited $90. Balance: $1687 -> $1777
+Bob deposited $111. Balance: $1777 -> $1888
+Charlie withdrew $154. Balance: $1888 -> $1734
+
+Final balance: $1734
+Total transactions: 15
+

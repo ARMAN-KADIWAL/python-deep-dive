@@ -1,0 +1,24 @@
+=== TCP (SOCK_STREAM) Example ===
+TCP Socket Type: 1
+TCP Characteristics:
+- Connection-oriented
+- Reliable data delivery
+- Ordered data transmission
+- Error checking and correction
+- Stream reliability adds protocol overhead; performance depends on workload
+
+=== UDP (SOCK_DGRAM) Example ===
+UDP Socket Type: 2
+UDP Characteristics:
+- Connectionless
+- No delivery guarantee
+- No order guarantee
+- Minimal error checking
+- Datagram overhead is lower; application performance depends on workload
+
+=== Socket Options Demo ===
+SO_REUSEADDR: 0
+Receive Buffer Size: 131072 bytes
+Send Buffer Size: 16384 bytes
+SO_REUSEADDR enabled
+

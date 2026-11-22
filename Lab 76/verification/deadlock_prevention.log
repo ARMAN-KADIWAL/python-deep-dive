@@ -1,0 +1,6 @@
+worker_ordered_locking: 2/2 operations completed; 0 abandoned safely
+worker_timeout_approach: 1/2 operations completed; 1 abandoned safely
+worker_try_lock_approach: 2/2 operations completed; 0 abandoned safely
+PASS: All strategies returned without deadlock or leaked locks.
+Timeout/retry approaches can abandon an operation; completion counts are shown above.
+

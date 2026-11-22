@@ -1,0 +1,43 @@
+Basic gather results: ['A', 'B', 'C', 'D']
+Elapsed: 3.01s
+HTTP results:
+[
+  {
+    "name": "Delay 1s",
+    "status": 200,
+    "bytes": 210
+  },
+  {
+    "name": "Delay 2s",
+    "status": 200,
+    "bytes": 210
+  },
+  {
+    "name": "JSON data",
+    "status": 200,
+    "bytes": 207
+  },
+  {
+    "name": "UUID generator",
+    "status": 200,
+    "bytes": 207
+  }
+]
+Database simulation:
+[
+  {
+    "query": "SELECT users",
+    "rows": 65
+  },
+  {
+    "query": "SELECT products",
+    "rows": 17
+  },
+  {
+    "query": "SELECT orders",
+    "rows": 47
+  }
+]
+PASS: Three real files written, read and cleaned up.
+PASS: Gather, HTTP, database simulation and real file I/O completed.
+

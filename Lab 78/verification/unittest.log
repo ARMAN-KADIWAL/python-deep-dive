@@ -1,0 +1,20 @@
+PASS: Three real files written, read and cleaned up.
+SUCCESS: Task 1 completed successfully
+HANDLED: Task 2 failed intentionally
+Starting A...
+Starting B...
+Completed B after 0.01 seconds
+Completed A after 0.03 seconds
+
+test_actual_file_read_write (test_lab78.AsyncioTests.test_actual_file_read_write) ... ok
+test_cpu_executor_returns_correct_sums (test_lab78.AsyncioTests.test_cpu_executor_returns_correct_sums) ... ok
+test_errors_are_isolated (test_lab78.AsyncioTests.test_errors_are_isolated) ... ok
+test_gather_returns_input_order (test_lab78.AsyncioTests.test_gather_returns_input_order) ... ok
+test_http_timeout (test_lab78.AsyncioTests.test_http_timeout) ... ok
+test_io_benchmark_returns_each_task (test_lab78.AsyncioTests.test_io_benchmark_returns_each_task) ... ok
+test_real_http_success_and_error (test_lab78.AsyncioTests.test_real_http_success_and_error) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.323s
+
+OK

@@ -1,0 +1,17 @@
+I/O COMPARISON: Five tasks, one second each
+Synchronous I/O: 5.004s | verified=True
+Asyncio I/O: 1.009s | verified=True
+Threading I/O: 1.004s | verified=True
+Multiprocessing I/O: 1.229s | verified=True
+
+CPU COMPARISON: Four tasks, identical iteration counts
+Synchronous CPU: 0.352s | verified=True
+Threading CPU: 0.490s | verified=True
+Multiprocessing CPU: 0.376s | verified=True
+Asyncio + process pool CPU: 0.508s | verified=True
+
+Report saved: benchmark_results.json
+Process/thread startup and shutdown are included in timings.
+Small CPU tasks may be slower with process startup overhead.
+PASS: All eight benchmark results verified.
+

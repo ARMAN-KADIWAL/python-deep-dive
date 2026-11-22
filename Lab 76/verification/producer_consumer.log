@@ -1,0 +1,54 @@
+=== Producer-Consumer with Thread Synchronization ===
+Configuration:
+- Producers: 2
+- Consumers: 2
+- Items per producer: 5
+- Buffer max size: 5
+
+Producer 1 starting...
+Producer 2 starting...
+Consumer 1 starting...
+Buffer empty, consumer waiting...
+Consumer 2 starting...
+Buffer empty, consumer waiting...
+Produced: Item-2-1, Buffer size: 1
+Consumed: Item-2-1, Buffer size: 0
+Produced: Item-1-1, Buffer size: 1
+Consumed: Item-1-1, Buffer size: 0
+Produced: Item-2-2, Buffer size: 1
+Consumer 1 processed: Item-2-1
+Consumed: Item-2-2, Buffer size: 0
+Produced: Item-2-3, Buffer size: 1
+Produced: Item-1-2, Buffer size: 2
+Produced: Item-1-3, Buffer size: 3
+Consumer 2 processed: Item-1-1
+Consumed: Item-2-3, Buffer size: 2
+Produced: Item-2-4, Buffer size: 3
+Consumer 1 processed: Item-2-2
+Consumed: Item-1-2, Buffer size: 2
+Produced: Item-1-4, Buffer size: 3
+Produced: Item-2-5, Buffer size: 4
+Producer 2 finished
+Consumer 1 processed: Item-1-2
+Consumed: Item-1-3, Buffer size: 3
+Consumer 2 processed: Item-2-3
+Consumed: Item-2-4, Buffer size: 2
+Produced: Item-1-5, Buffer size: 3
+Producer 1 finished
+Consumer 1 processed: Item-1-3
+Consumed: Item-1-4, Buffer size: 2
+Consumer 2 processed: Item-2-4
+Consumed: Item-2-5, Buffer size: 1
+Consumer 2 processed: Item-2-5
+Consumed: Item-1-5, Buffer size: 0
+Consumer 1 processed: Item-1-4
+Consumer 1 finished
+Consumer 2 processed: Item-1-5
+Consumer 2 finished
+
+=== Results ===
+All threads completed successfully!
+Final buffer size: 0
+Total execution time: 3.43 seconds
+✅ Producer-Consumer synchronization working correctly!
+

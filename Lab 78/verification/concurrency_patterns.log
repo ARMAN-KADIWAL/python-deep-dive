@@ -1,0 +1,37 @@
+Starting A
+Starting B
+Starting C
+Completed B
+Completed A
+Completed C
+gather: ['A', 'B', 'C']; 3.00s
+
+Starting A
+Starting B
+Starting C
+Completed B
+Completed A
+Completed C
+create_task: ['A', 'B', 'C']; 3.01s
+
+Starting C
+Starting A
+Starting B
+Completed B
+Received: B
+Completed A
+Received: A
+Completed C
+Received: C
+as_completed: ['B', 'A', 'C']; 3.00s
+
+Starting A
+Starting B
+Starting C
+Completed B
+Completed A
+Completed C
+wait: ['A', 'C', 'B']; 3.01s
+
+PASS: All four concurrency patterns completed.
+

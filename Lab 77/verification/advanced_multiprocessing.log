@@ -1,0 +1,6 @@
+Counter with lock: 15; expected: 15
+Counter without lock: 5; expected: 15
+The unsafe result depends on scheduling; a correct run does not prove safety.
+Shared array: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+PASS: Counters and shared memory verified; resources cleaned up.
+

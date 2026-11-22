@@ -1,0 +1,6 @@
+CPU processes: 0.2415s; results verified
+CPU threads: 0.3765s; results verified
+I/O processes: 1.1105s; results verified
+I/O threads: 1.0018s; results verified
+Startup and shutdown are included; processes are not guaranteed to be faster for small tasks.
+

@@ -1,0 +1,588 @@
+{
+  "generated_at_utc": "2026-11-22T16:57:35.545328+00:00",
+  "python": "3.12.14",
+  "dependencies": {
+    "aiohttp": "3.14.5",
+    "beautifulsoup4": "4.15.0",
+    "numpy": "2.3.5",
+    "requests": "2.34.2"
+  },
+  "network_scope": "Controlled loopback HTTP/TCP/UDP; public httpbin.org was not used.",
+  "smoke_enabled": true,
+  "labs": [
+    {
+      "lab": 75,
+      "python_files": 11,
+      "unit_tests": 6,
+      "unit": {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-v",
+          "-p",
+          "test_lab75.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 1.92,
+        "log": "Lab 75/verification/unittest.log"
+      },
+      "smoke": [
+        {
+          "command": [
+            "python",
+            "basic_threading.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 3.024,
+          "log": "Lab 75/verification/basic_threading.log"
+        },
+        {
+          "command": [
+            "python",
+            "sequential_vs_concurrent.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 8.03,
+          "log": "Lab 75/verification/sequential_vs_concurrent.log"
+        },
+        {
+          "command": [
+            "python",
+            "gil_demonstration.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 4.375,
+          "log": "Lab 75/verification/gil_demonstration.log"
+        },
+        {
+          "command": [
+            "python",
+            "performance_measurement.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 0.595,
+          "log": "Lab 75/verification/performance_measurement.log"
+        },
+        {
+          "command": [
+            "python",
+            "advanced_threading.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 1.047,
+          "log": "Lab 75/verification/advanced_threading.log"
+        },
+        {
+          "command": [
+            "python",
+            "thread_lifecycle.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 15.048,
+          "log": "Lab 75/verification/thread_lifecycle.log"
+        },
+        {
+          "command": [
+            "python",
+            "race_condition_demo.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 0.925,
+          "log": "Lab 75/verification/race_condition_demo.log"
+        },
+        {
+          "command": [
+            "python",
+            "thread_synchronization.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 5.015,
+          "log": "Lab 75/verification/thread_synchronization.log"
+        },
+        {
+          "command": [
+            "python",
+            "advanced_locks.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 15.634,
+          "log": "Lab 75/verification/advanced_locks.log"
+        },
+        {
+          "command": [
+            "python",
+            "thread_monitoring.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 3.022,
+          "log": "Lab 75/verification/thread_monitoring.log"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "lab": 76,
+      "python_files": 7,
+      "unit_tests": 5,
+      "unit": {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-v",
+          "-p",
+          "test_lab76.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.586,
+        "log": "Lab 76/verification/unittest.log"
+      },
+      "smoke": [
+        {
+          "command": [
+            "python",
+            "counter_without_lock.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 8.7,
+          "log": "Lab 76/verification/counter_without_lock.log"
+        },
+        {
+          "command": [
+            "python",
+            "counter_with_lock.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 27.745,
+          "log": "Lab 76/verification/counter_with_lock.log"
+        },
+        {
+          "command": [
+            "python",
+            "lock_comparison.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 1.565,
+          "log": "Lab 76/verification/lock_comparison.log"
+        },
+        {
+          "command": [
+            "python",
+            "deadlock_demo.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 3.09,
+          "log": "Lab 76/verification/deadlock_demo.log"
+        },
+        {
+          "command": [
+            "python",
+            "deadlock_prevention.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 0.272,
+          "log": "Lab 76/verification/deadlock_prevention.log"
+        },
+        {
+          "command": [
+            "python",
+            "producer_consumer.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 3.461,
+          "log": "Lab 76/verification/producer_consumer.log"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "lab": 77,
+      "python_files": 7,
+      "unit_tests": 6,
+      "unit": {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-v",
+          "-p",
+          "test_lab77.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 1.987,
+        "log": "Lab 77/verification/unittest.log"
+      },
+      "smoke": [
+        {
+          "command": [
+            "python",
+            "basic_multiprocessing.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 8.191,
+          "log": "Lab 77/verification/basic_multiprocessing.log"
+        },
+        {
+          "command": [
+            "python",
+            "performance_comparison.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 2.826,
+          "log": "Lab 77/verification/performance_comparison.log"
+        },
+        {
+          "command": [
+            "python",
+            "process_pool_demo.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 0.818,
+          "log": "Lab 77/verification/process_pool_demo.log"
+        },
+        {
+          "command": [
+            "python",
+            "queue_communication.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 0.243,
+          "log": "Lab 77/verification/queue_communication.log"
+        },
+        {
+          "command": [
+            "python",
+            "parallel_factorial.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 0.611,
+          "log": "Lab 77/verification/parallel_factorial.log"
+        },
+        {
+          "command": [
+            "python",
+            "advanced_multiprocessing.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 0.926,
+          "log": "Lab 77/verification/advanced_multiprocessing.log"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "lab": 78,
+      "python_files": 11,
+      "unit_tests": 7,
+      "unit": {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-v",
+          "-p",
+          "test_lab78.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 1.643,
+        "log": "Lab 78/verification/unittest.log"
+      },
+      "smoke": [
+        {
+          "command": [
+            "python",
+            "sync_example.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 6.036,
+          "log": "Lab 78/verification/sync_example.log"
+        },
+        {
+          "command": [
+            "python",
+            "async_example.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 3.109,
+          "log": "Lab 78/verification/async_example.log"
+        },
+        {
+          "command": [
+            "python",
+            "coroutines_demo.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 5.458,
+          "log": "Lab 78/verification/coroutines_demo.log"
+        },
+        {
+          "command": [
+            "python",
+            "async_error_handling.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 1.161,
+          "log": "Lab 78/verification/async_error_handling.log"
+        },
+        {
+          "command": [
+            "python",
+            "gather_demo.py",
+            "--offline"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 7.362,
+          "log": "Lab 78/verification/gather_demo.log"
+        },
+        {
+          "command": [
+            "python",
+            "concurrency_patterns.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 12.092,
+          "log": "Lab 78/verification/concurrency_patterns.log"
+        },
+        {
+          "command": [
+            "python",
+            "event_loop_demo.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 4.104,
+          "log": "Lab 78/verification/event_loop_demo.log"
+        },
+        {
+          "command": [
+            "python",
+            "event_loop_debug.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 1.695,
+          "log": "Lab 78/verification/event_loop_debug.log"
+        },
+        {
+          "command": [
+            "python",
+            "performance_comparison.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 10.132,
+          "log": "Lab 78/verification/performance_comparison.log"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "lab": 79,
+      "python_files": 7,
+      "unit_tests": 9,
+      "unit": {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-v",
+          "-p",
+          "test_lab79.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 1.124,
+        "log": "Lab 79/verification/unittest.log"
+      },
+      "smoke": [
+        {
+          "command": [
+            "python",
+            "main.py",
+            "--offline"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 0.939,
+          "log": "Lab 79/verification/main.log"
+        },
+        {
+          "command": [
+            "python",
+            "enhanced_scraper.py",
+            "--offline"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 0.482,
+          "log": "Lab 79/verification/enhanced_scraper.log"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "lab": 80,
+      "python_files": 13,
+      "unit_tests": 12,
+      "unit": {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-v",
+          "-p",
+          "test_lab80.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.594,
+        "log": "Lab 80/verification/unittest.log"
+      },
+      "smoke": [
+        {
+          "command": [
+            "python",
+            "basic_socket.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 0.048,
+          "log": "Lab 80/verification/basic_socket.log"
+        },
+        {
+          "command": [
+            "python",
+            "socket_comparison.py"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 0.034,
+          "log": "Lab 80/verification/socket_comparison.log"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "lab": 81,
+      "python_files": 7,
+      "unit_tests": 4,
+      "unit": {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-v",
+          "-p",
+          "test_lab81.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.307,
+        "log": "Lab 81/verification/unittest.log"
+      },
+      "smoke": [],
+      "passed": true
+    },
+    {
+      "lab": 82,
+      "python_files": 7,
+      "unit_tests": 6,
+      "unit": {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-v",
+          "-p",
+          "test_lab82.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.562,
+        "log": "Lab 82/verification/unittest.log"
+      },
+      "smoke": [],
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "Lab 75/advanced_locks.py": "a11d8699dc9feeab67dc12b23f95fd854a1c2e311d36c18dc9eb4c042ddee2bf",
+    "Lab 75/advanced_threading.py": "442dbe90600c7b3d557f6928212f49bd2f24703d32d3a97a0c8a49f31bebef4a",
+    "Lab 75/basic_threading.py": "b7a626978fedee7f236fd9c84f8f27f1604dc77ecaa88401598396b5945ca97d",
+    "Lab 75/gil_demonstration.py": "44314bbe926b0292adafadf6db91846e7c24264a0a55464db141330287d18717",
+    "Lab 75/performance_measurement.py": "5f313cb09a838cfef0146023ac72f62f15b230a6f049352e4912c3bdf86a44b0",
+    "Lab 75/race_condition_demo.py": "5a2b0a758f859008197ba24e1a651e5566f952014092f6a62baced95e63d64de",
+    "Lab 75/sequential_vs_concurrent.py": "515b8f4abf4e40b768eebc1f17b3c670df6f14c630e90507dfdc4ea2378edebb",
+    "Lab 75/test_lab75.py": "2a9198d5fcc443dce76087b6c53a08ec2c15c5d2d009b5a6443c4cbc213d786c",
+    "Lab 75/thread_lifecycle.py": "1eb7d0fedd3c682bbceed0ad8fafe16d8907a7f3b20ccd345632d19dfbee0056",
+    "Lab 75/thread_monitoring.py": "7b068e58534d8497f9e3a51aca8029c059a31fc1bab51a6feef5dae6f46d246b",
+    "Lab 75/thread_synchronization.py": "55a6ff415f618da03ab19f711ba476ef07be99a708bc19de248dce5cde894411",
+    "Lab 76/counter_with_lock.py": "7f61585ce0eeaa147d93c7e2cc44ed42c77eacab3532c3c756c7d49568fdc60e",
+    "Lab 76/counter_without_lock.py": "9612f04e1c0cb61074f114f7c0e3d40690ee376ac00cd71d1f7f2ac01e19edf2",
+    "Lab 76/deadlock_demo.py": "2f11031ea1af23da11010a42b2c9eb144aca2ba976e8c1445bbd6f20a0f07fbd",
+    "Lab 76/deadlock_prevention.py": "2ac5543edaf0951a916280a4989671aa3afd97e64651a88decc8a23409fd7100",
+    "Lab 76/lock_comparison.py": "902f375ee58e7245396dccafdd7a42af5da82b553d71f0aef04fb31e1c11c523",
+    "Lab 76/producer_consumer.py": "08715c68b9897876a176332a062a64cc4a8cf096975f1144c4246904cf72d25a",
+    "Lab 76/test_lab76.py": "84c13722601310a507f2aa898db0b861e390b56fdf5d9a98d962430b47b326f5",
+    "Lab 77/advanced_multiprocessing.py": "9abffb16f4bda6db306e666ab5bd9c2f45a79bc5cbb7707c08e72a47eac73791",
+    "Lab 77/basic_multiprocessing.py": "f6ad73570ee51bcf0a6ffaf341f27bea50270a6df40829db1892874321f2b473",
+    "Lab 77/parallel_factorial.py": "9b153cc15e948f7378317353ca234e56d5723f7d096def37fa909aca7f7aa708",
+    "Lab 77/performance_comparison.py": "44a7f6273f1676bc243e8c5043f1c6e52844e20845d2d7c90c6218e7ae2d8c0f",
+    "Lab 77/process_pool_demo.py": "1df28dad9b319e653830d7f391ae1c23dc0dd4377ce901825369f5aca87565b7",
+    "Lab 77/queue_communication.py": "d7871413b27f3286750dd8979b2a6360604c11870aa25064697835eea8386244",
+    "Lab 77/test_lab77.py": "c43a85747349cea3f31591aad18046a86d4b28f33adeb01a010bb8695e6f99ba",
+    "Lab 78/async_error_handling.py": "9ff641d71c01e12e12341b4b3c54d86a82b4ebe6dc1d0947f0b95251b8514ec3",
+    "Lab 78/async_example.py": "935e7f074ba3a2564d5df98b37b316f75a17ccd2a6a595d83f01d7e3a2cf2593",
+    "Lab 78/concurrency_patterns.py": "14e91ede0c872f4d4a7f3ab3fe90bb904e85bdd340875a06f192e7b98d7428d0",
+    "Lab 78/coroutines_demo.py": "843c392757ede7262be3d471bb2105eeaaafdea67810f69795089b852b8d29e9",
+    "Lab 78/event_loop_debug.py": "064959c17c0748449ea2ee46f94185026b111632eb67fa29c0abc3926b7f1836",
+    "Lab 78/event_loop_demo.py": "de0961762164f6fae24ba6fda2915b5bd522cf0778bafd70781b34d09905fb19",
+    "Lab 78/gather_demo.py": "ad9ecac2e79fa24f26b5d495ff110b087be295f2496e5efd34bf4bf7b7dff3e1",
+    "Lab 78/http_fixture.py": "cbc14810541197f939e0e97dbe4b288848331f7b7f7ab2f5781e6a6ec2223f2c",
+    "Lab 78/performance_comparison.py": "b8bf6fde4ecebf17281b2040d8f1416d3533e5e3728c5835011bb3232a04a9e5",
+    "Lab 78/sync_example.py": "f795fd0e3e5a974c401a1091b5bd6c3b2f269fa341d1986ad620817c72f21580",
+    "Lab 78/test_lab78.py": "54e422f248bc697175576438b66b655e3c32354d28dca6f35797c274d1aaa17a",
+    "Lab 79/async_scraper.py": "d1ac3a689763c68db89f3f414eeaf6372340375a1e6e83d8a3372a36b73ce16c",
+    "Lab 79/enhanced_scraper.py": "391e4683684ac86502a7cb2b63e34d6b8a8bda1a03ed5aacdd10c6d6ebbf36e0",
+    "Lab 79/http_fixture.py": "cbc14810541197f939e0e97dbe4b288848331f7b7f7ab2f5781e6a6ec2223f2c",
+    "Lab 79/main.py": "1d1eacd3f05d9949613ea9b833a05fee311cf9b9878f43fae14e20522073dada",
+    "Lab 79/page_parser.py": "36ae99f4ec81810e523c77963196609191a840f298edcb854db21472590870df",
+    "Lab 79/sync_scraper.py": "34e41b9fea76f0c620fbd4451244c67f197fdd66318ca11cecdab108fed4b1db",
+    "Lab 79/test_lab79.py": "0d55af1507628dc2eded6a69d147a0a4fe3052674b68df75076a7e3ad6f83e10",
+    "Lab 80/basic_socket.py": "3fb71e5dede2bd317b30083a95d54138f495fb05be7a124273403f711451dd29",
+    "Lab 80/client_core.py": "a9f1ddab574cc83248bd66f6e9042566c5475423a13c592837080a307c38a414",
+    "Lab 80/network_core.py": "510134e1efdc91b162b0e7a77fc60fbc1a660e5ee6eff044924d0ccf0d4dcd32",
+    "Lab 80/robust_client.py": "0abd996290088bf63f8901d882a9f22ed8a5e37ee85696149c256efe9a2e7db8",
+    "Lab 80/robust_server.py": "dca1f58d025896a2aed33b9b95f28111607dba79118fd6358abf806a6010f62e",
+    "Lab 80/socket_comparison.py": "c6faa8946b239fec1226c0137e0fb2c5c51e468de0545c48c24e21b62985f4ae",
+    "Lab 80/socket_context_manager.py": "0fbfb1ea701df33c542d8302bcfdfd0fa7ddff85e9a4f5c2bf2c5ca9810075d2",
+    "Lab 80/socket_performance_test.py": "6dc68d91900443b7f26bd3fd3262af13157ef5b3b58fb7da9d9ed0c87a4d2d9c",
+    "Lab 80/tcp_client.py": "6bb7403a81353163503224d982a7550cd9d169d18c4ef4b34c3d6771c19b010e",
+    "Lab 80/tcp_server.py": "98417b9066b36749b01b453e83b8e4426bdad440296ed0222998ec869633b905",
+    "Lab 80/test_lab80.py": "2c27849843a7dae24792ecd1c22111d7771e9947edd9b34bc8ae74452fe60f42",
+    "Lab 80/udp_client.py": "bd7e3abb204f72ea5c32ad54161648d96157c9d19def3a569dd60d5134bc5f06",
+    "Lab 80/udp_server.py": "df545a48a73fb3c71e215959f2d38876d9f34fcda49d9a478b0c76e79d01fa04",
+    "Lab 81/client.py": "40aae319bcf095142285ddee5b6c346ce5bf9435facf450fed3eddcac9b49330",
+    "Lab 81/client_core.py": "a9f1ddab574cc83248bd66f6e9042566c5475423a13c592837080a307c38a414",
+    "Lab 81/network_core.py": "510134e1efdc91b162b0e7a77fc60fbc1a660e5ee6eff044924d0ccf0d4dcd32",
+    "Lab 81/server.py": "eec5ec7bdadbc0807de22a81a83d27bf4aa9efde7ad5360be3bb0dbdee7e33a1",
+    "Lab 81/server_threaded.py": "a4c1b3d2105b9e1bae2d5382aa0b92ab0c187d61fb0fa337b129191a49581e88",
+    "Lab 81/test_lab81.py": "36a49e369fabad2c8e8447b73fe7343c97ded5db9c57ea856d180a3269b01951",
+    "Lab 81/test_multiple_clients.py": "18c0fc0d4664802eaeb9eacf7fc6f2c0486099072e9bfb1554a455cbcbb926e6",
+    "Lab 82/client_core.py": "a9f1ddab574cc83248bd66f6e9042566c5475423a13c592837080a307c38a414",
+    "Lab 82/multi_client_test.py": "9bfa5f518616e43ed99bf945839545e8d491a208640cbdd67b85f4ce940fd329",
+    "Lab 82/multi_server.py": "854c7ea989732caca98f44e49c4e86173fc69d1aa7cc63b8fc3ece6ab93340eb",
+    "Lab 82/network_core.py": "510134e1efdc91b162b0e7a77fc60fbc1a660e5ee6eff044924d0ccf0d4dcd32",
+    "Lab 82/server_monitor.py": "40c65a7effd0d45823360c53f015f53ba3549e7e5e591327ff2b617d02e932c0",
+    "Lab 82/test_client.py": "f4b21f0e0ef2f6b6e9589e6084bfcf674915b83b32f23bcc0539ec77153898bf",
+    "Lab 82/test_lab82.py": "9028fc364b76e8ed54d4621c5e9292b9b0bed6f3729e271e31c5848f3a27b2fd"
+  },
+  "total_unit_tests": 55,
+  "smoke_runs": 35,
+  "all_passed": true,
+  "limits": [
+    "Benchmarks are illustrative single runs, not universal speed guarantees.",
+    "Intentional race/deadlock and handled-error demos are labelled in their output.",
+    "Persistent servers and interactive clients are exercised by owned-server integration tests.",
+    "Local network checks do not validate an external cloud firewall or public website availability."
+  ],
+  "record_type": "Committed snapshot of actual local validation; new runs write validation-output."
+}

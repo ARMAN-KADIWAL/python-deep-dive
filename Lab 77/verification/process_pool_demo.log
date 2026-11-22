@@ -1,0 +1,60 @@
+Process Pool Demonstrations
+==================================================
+=== Pool.map() Demonstration ===
+Processing 8 tasks with 4 worker processes
+Worker 274 starting task 4
+Worker 274 completed task 4 in 0.12s, result: 16
+Worker 274 starting task 7
+Worker 274 completed task 7 in 0.06s, result: 49
+Worker 271 starting task 3
+Worker 271 completed task 3 in 0.09s, result: 9
+Worker 271 starting task 5
+Worker 271 completed task 5 in 0.12s, result: 25
+Worker 273 starting task 2
+Worker 273 completed task 2 in 0.10s, result: 4
+Worker 273 starting task 6
+Worker 273 completed task 6 in 0.13s, result: 36
+Worker 272 starting task 1
+Worker 272 completed task 1 in 0.14s, result: 1
+Worker 272 starting task 8
+Worker 272 completed task 8 in 0.13s, result: 64
+
+All tasks completed in 0.38 seconds
+Results summary:
+  Task 1: 1 (Process 272)
+  Task 2: 4 (Process 273)
+  Task 3: 9 (Process 271)
+  Task 4: 16 (Process 274)
+  Task 5: 25 (Process 271)
+  Task 6: 36 (Process 273)
+  Task 7: 49 (Process 274)
+  Task 8: 64 (Process 272)
+
+=== Pool.apply_async() Demonstration ===
+Processing 5 tasks asynchronously with 3 workers
+Worker 280 starting task 3
+Worker 280 completed task 3 in 0.09s, result: 9
+Worker 279 starting task 1
+Worker 279 completed task 1 in 0.08s, result: 1
+Worker 279 starting task 5
+Worker 279 completed task 5 in 0.10s, result: 25
+Worker 278 starting task 2
+Worker 278 completed task 2 in 0.07s, result: 4
+Worker 278 starting task 4
+Worker 278 completed task 4 in 0.14s, result: 16
+Collected result for task 1
+Collected result for task 2
+Collected result for task 3
+Collected result for task 4
+Collected result for task 5
+
+All async tasks completed in 0.30 seconds
+
+=== Pool.starmap() Demonstration ===
+Process 286 - Task A: 2 * 3 = 6
+Process 286 - Task B: 4 * 5 = 20
+Process 286 - Task C: 6 * 7 = 42
+Process 286 - Task D: 8 * 9 = 72
+Process 286 - Task E: 10 * 11 = 110
+Starmap results: [6, 20, 42, 72, 110]
+

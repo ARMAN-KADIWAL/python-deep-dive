@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+validation-output/
+Lab 78/benchmark_results.json
+Lab 79/scraping_results.json

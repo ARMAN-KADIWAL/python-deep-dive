@@ -1,0 +1,25 @@
+=== Race Condition Demonstration ===
+Running unsafe increment with multiple threads...
+Thread-1: iteration 0, counter = 1
+Thread-2: iteration 0, counter = 2
+Thread-3: iteration 0, counter = 3
+Thread-2: iteration 1000, counter = 1002
+Thread-1: iteration 1000, counter = 1001
+Thread-3: iteration 1000, counter = 1003
+Thread-2: iteration 2000, counter = 2002
+Thread-1: iteration 2000, counter = 2001
+Thread-3: iteration 2000, counter = 2003
+Thread-2: iteration 3000, counter = 3002
+Thread-1: iteration 3000, counter = 3001
+Thread-3: iteration 3000, counter = 3003
+Thread-1: iteration 4000, counter = 4001
+Thread-2: iteration 4000, counter = 4002
+Thread-3: iteration 4000, counter = 4003
+
+Results:
+Expected counter value: 15000
+Actual counter value: 5002
+Difference: 9998
+Execution time: 0.87 seconds
+❌ Race condition detected! Counter value is incorrect.
+

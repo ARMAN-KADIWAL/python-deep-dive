@@ -1,0 +1,31 @@
+=== GIL Demonstration ===
+This demonstrates how GIL affects CPU-bound vs IO-bound tasks
+
+=== Single Thread Execution ===
+Single-Thread starting CPU-bound task...
+Single-Thread completed in 0.60 seconds. Result: 333333283333335000000
+Single-Thread starting CPU-bound task...
+Single-Thread completed in 0.57 seconds. Result: 333333283333335000000
+Total single-thread time: 1.17 seconds
+
+=== Multiple Threads Execution ===
+Thread-1 starting CPU-bound task...
+Thread-2 starting CPU-bound task...
+Thread-2 completed in 1.10 seconds. Result: 333333283333335000000
+Thread-1 completed in 1.15 seconds. Result: 333333283333335000000
+Total multi-thread time: 1.15 seconds
+
+=== IO-bound Tasks with Threading ===
+IO-Thread-1 starting IO-bound task...
+IO-Thread-2 starting IO-bound task...
+IO-Thread-3 starting IO-bound task...
+IO-Thread-1 completed IO-bound task
+IO-Thread-2 completed IO-bound task
+IO-Thread-3 completed IO-bound task
+IO-bound threading time: 2.00 seconds
+
+Key Observations:
+1. CPU-bound tasks don't benefit much from threading due to GIL
+2. IO-bound tasks benefit significantly from threading
+3. For CPU-bound tasks, consider multiprocessing instead
+

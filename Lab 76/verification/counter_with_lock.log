@@ -1,0 +1,32 @@
+=== Counter With Lock Demo ===
+
+--- Using 'with' statement for lock management ---
+Thread-A starting...
+Thread-A: Iteration 0, Counter = 1
+Thread-B starting...
+Thread-C starting...
+Thread-C: Iteration 0, Counter = 40
+Thread-B: Iteration 0, Counter = 291
+Thread-B: Iteration 10000, Counter = 24270
+Thread-A: Iteration 10000, Counter = 31101
+Thread-C: Iteration 10000, Counter = 33638
+Thread-B: Iteration 20000, Counter = 53385
+Thread-A: Iteration 20000, Counter = 59652
+Thread-C: Iteration 20000, Counter = 70238
+Thread-A: Iteration 30000, Counter = 77440
+Thread-B: Iteration 30000, Counter = 90118
+Thread-C: Iteration 30000, Counter = 102692
+Thread-A: Iteration 40000, Counter = 105252
+Thread-B: Iteration 40000, Counter = 120765
+Thread-C: Iteration 40000, Counter = 131688
+Thread-A finished. Final counter value seen: 138619
+Thread-B finished. Final counter value seen: 143237
+Thread-C finished. Final counter value seen: 150000
+
+=== Results (with lock) ===
+Expected counter value: 150000
+Actual counter value: 150000
+Difference: 0
+Execution time: 27.71 seconds
+✅ Synchronization successful! Counter value is correct.
+

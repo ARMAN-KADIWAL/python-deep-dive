@@ -1,0 +1,50 @@
+Server started on 127.0.0.1:42253
+Server started on 127.0.0.1:35331
+Server received: Hello from context manager!
+Socket closed automatically.
+Server started on 127.0.0.1:35785
+Server started on 127.0.0.1:45025
+Server started on 127.0.0.1:45441
+messages: 20
+payload_bytes: 8192
+elapsed_seconds: 0.0036
+mean_rtt_ms: 0.1803
+median_rtt_ms: 0.1278
+min_rtt_ms: 0.0521
+max_rtt_ms: 0.4709
+messages_per_second: 5522.5827
+sent_payload_bytes_per_second: 45240997.2229
+PASS: Every complete echo response verified.
+Payload rate excludes response bytes, frame headers and network overhead.
+messages: 3
+payload_bytes: 32
+elapsed_seconds: 0.0002
+mean_rtt_ms: 0.0821
+median_rtt_ms: 0.0654
+min_rtt_ms: 0.0365
+max_rtt_ms: 0.1444
+messages_per_second: 12042.1475
+sent_payload_bytes_per_second: 385348.7202
+PASS: Every complete echo response verified.
+Payload rate excludes response bytes, frame headers and network overhead.
+Server started on 127.0.0.1:43213
+Server started on 127.0.0.1:42703
+UDP server started on 127.0.0.1:49403
+
+test_coalesced_frames_and_empty_message (test_lab80.FramingTests.test_coalesced_frames_and_empty_message) ... ok
+test_fragmented_utf8_message (test_lab80.FramingTests.test_fragmented_utf8_message) ... ok
+test_oversized_frame_rejected (test_lab80.FramingTests.test_oversized_frame_rejected) ... ok
+test_truncated_header_rejected (test_lab80.FramingTests.test_truncated_header_rejected) ... ok
+test_basic_interactive_client (test_lab80.SocketTests.test_basic_interactive_client) ... ok
+test_context_manager_closes_socket (test_lab80.SocketTests.test_context_manager_closes_socket) ... ok
+test_invalid_tcp_encoding_does_not_kill_server (test_lab80.SocketTests.test_invalid_tcp_encoding_does_not_kill_server) ... ok
+test_large_unicode_echo_and_quit (test_lab80.SocketTests.test_large_unicode_echo_and_quit) ... ok
+test_performance_validates_full_echo_and_resets_samples (test_lab80.SocketTests.test_performance_validates_full_echo_and_resets_samples) ... ok
+test_robust_interactive_commands (test_lab80.SocketTests.test_robust_interactive_commands) ... ok
+test_shutdown_closes_idle_connection (test_lab80.SocketTests.test_shutdown_closes_idle_connection) ... ok
+test_udp_roundtrip (test_lab80.SocketTests.test_udp_roundtrip) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.450s
+
+OK

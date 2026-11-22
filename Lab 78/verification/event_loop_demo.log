@@ -1,0 +1,22 @@
+Current event loop: <_UnixSelectorEventLoop running=True closed=False debug=False>
+call_soon: Next loop iteration
+Task EventLoop1 started
+Task EventLoop2 started
+Task EventLoop1 completed
+Done callback: EventLoop1
+call_later: About two seconds elapsed
+Task EventLoop2 completed
+Done callback: EventLoop2
+Quick task Q0
+Task S0 started
+Quick task Q1
+Task S1 started
+Quick task Q2
+Task S2 started
+Task S0 completed
+Task S1 completed
+Task S2 completed
+Scheduled results: ['Q0', 'S0', 'Q1', 'S1', 'Q2', 'S2']
+Loop elapsed: 1.01s
+PASS: Event loop callbacks, scheduling and timing completed.
+

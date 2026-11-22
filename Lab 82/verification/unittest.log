@@ -1,0 +1,18 @@
+Server started on 127.0.0.1:37367
+Server started on 127.0.0.1:44997
+Server started on 127.0.0.1:36843
+Server started on 127.0.0.1:37949
+{'success': 5, 'failed': 0, 'messages_verified': 50, 'total_time': 0.0320141010001862}
+Server started on 127.0.0.1:45411
+
+test_automated_client_and_multi_client_cli (test_lab82.MultiClientTests.test_automated_client_and_multi_client_cli) ... ok
+test_history_and_stats_are_framed_together (test_lab82.MultiClientTests.test_history_and_stats_are_framed_together) ... ok
+test_idle_timeout_cleans_up_partial_frame (test_lab82.MultiClientTests.test_idle_timeout_cleans_up_partial_frame) ... ok
+test_monitor_validates_all_responses (test_lab82.MultiClientTests.test_monitor_validates_all_responses) ... ok
+test_shared_data_is_thread_safe_and_bounded (test_lab82.MultiClientTests.test_shared_data_is_thread_safe_and_bounded) ... ok
+test_shutdown_leaves_no_client_threads (test_lab82.MultiClientTests.test_shutdown_leaves_no_client_threads) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.369s
+
+OK

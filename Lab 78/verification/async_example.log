@@ -1,0 +1,9 @@
+Starting Task 1...
+Starting Task 2...
+Starting Task 3...
+Completed Task 3 after 1 seconds
+Completed Task 1 after 2 seconds
+Completed Task 2 after 3 seconds
+Total execution time: 3.01 seconds
+Results: ['Result from Task 1', 'Result from Task 2', 'Result from Task 3']
+

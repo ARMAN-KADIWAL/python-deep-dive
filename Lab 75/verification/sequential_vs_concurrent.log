@@ -1,0 +1,19 @@
+
+=== Sequential Execution ===
+Task 1 starting...
+Task 1 completed
+Task 2 starting...
+Task 2 completed
+Task 3 starting...
+Task 3 completed
+Sequential execution time: 6.00 seconds
+
+=== Concurrent Execution ===
+Task 1 starting...
+Task 2 starting...
+Task 3 starting...
+Task 1 completed
+Task 2 completed
+Task 3 completed
+Concurrent execution time: 2.00 seconds
+

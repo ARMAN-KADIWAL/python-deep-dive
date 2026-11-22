@@ -1,0 +1,36 @@
+document.pdf (5 MB): 0%
+video.mp4 (50 MB): 0%
+music.mp3 (10 MB): 0%
+software.zip (100 MB): 0%
+document.pdf (5 MB): 20%
+video.mp4 (50 MB): 20%
+music.mp3 (10 MB): 20%
+software.zip (100 MB): 20%
+document.pdf (5 MB): 40%
+video.mp4 (50 MB): 40%
+music.mp3 (10 MB): 40%
+software.zip (100 MB): 40%
+document.pdf (5 MB): 60%
+video.mp4 (50 MB): 60%
+music.mp3 (10 MB): 60%
+software.zip (100 MB): 60%
+document.pdf (5 MB): 80%
+video.mp4 (50 MB): 80%
+software.zip (100 MB): 80%
+music.mp3 (10 MB): 80%
+document.pdf (5 MB): 100%
+video.mp4 (50 MB): 100%
+software.zip (100 MB): 100%
+music.mp3 (10 MB): 100%
+Worker-1 completed Task-1
+Worker-2 completed Task-2
+Worker-3 completed Task-3
+Worker-1 completed Task-4
+Worker-2 completed Task-5
+Worker-3 completed Task-6
+Worker-1 completed Task-7
+Worker-3 completed Task-9
+Worker-2 completed Task-8
+Worker-1 completed Task-10
+PASS: 10 unique tasks processed exactly once.
+

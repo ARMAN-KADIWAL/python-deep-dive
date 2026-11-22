@@ -1,0 +1,8 @@
+SUCCESS: Task 1 completed successfully
+HANDLED: Task 2 failed intentionally
+SUCCESS: Task 3 completed successfully
+SUCCESS: Task 4 completed successfully
+HANDLED: Task 5 failed intentionally
+Final results: [{'task': 1, 'status': 'success'}, {'task': 2, 'status': 'failed'}, {'task': 3, 'status': 'success'}, {'task': 4, 'status': 'success'}, {'task': 5, 'status': 'failed'}]
+PASS: Task 2 and Task 5 failed safely; other tasks completed.
+

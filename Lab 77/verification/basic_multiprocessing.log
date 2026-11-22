@@ -1,0 +1,21 @@
+Multiprocessing vs Sequential Execution Demo
+==================================================
+=== Sequential Execution ===
+Process Task1 (PID: 240) starting...
+Process Task1 (PID: 240) completed. Count: 15087951
+Process Task2 (PID: 240) starting...
+Process Task2 (PID: 240) completed. Count: 14091003
+Process Task3 (PID: 240) starting...
+Process Task3 (PID: 240) completed. Count: 12494506
+Sequential execution time: 6.01 seconds
+
+=== Multiprocessing Execution ===
+Process Task3 (PID: 244) starting...
+Process Task3 (PID: 244) completed. Count: 13254660
+Process Task2 (PID: 243) starting...
+Process Task2 (PID: 243) completed. Count: 11116121
+Process Task1 (PID: 242) starting...
+Process Task1 (PID: 242) completed. Count: 13329661
+Multiprocessing execution time: 2.10 seconds
+
+

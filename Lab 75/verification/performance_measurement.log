@@ -1,0 +1,19 @@
+=== Performance Comparison ===
+Calculating fibonacci(30) 2 times
+
+Single-threaded execution:
+Task 1 completed: 832040
+Task 2 completed: 832040
+Single-thread total time: 0.27 seconds
+
+Multi-threaded execution:
+Thread 1 completed: 832040
+Thread 2 completed: 832040
+Multi-thread total time: 0.28 seconds
+
+Performance Analysis:
+Single-thread time: 0.27s
+Multi-thread time: 0.28s
+Speedup ratio: 0.99x
+Threading provided no speedup for CPU-bound tasks (due to GIL)
+
