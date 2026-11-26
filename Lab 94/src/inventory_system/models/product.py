@@ -183,4 +183,3 @@ class Product:
     def __hash__(self) -> int:
         """Return hash based on product ID."""
         return hash(self._product_id)
-

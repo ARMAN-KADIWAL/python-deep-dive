@@ -286,4 +286,3 @@ class DashboardNotificationSystem(InventoryObserver):
             severity = notification['severity']
             counts[severity] += 1
         return counts
-

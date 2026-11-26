@@ -221,4 +221,3 @@ class Inventory:
             if (search_term in product.name.lower() or
                 search_term in product.product_id.lower())
         ]
-

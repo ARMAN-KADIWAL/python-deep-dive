@@ -211,4 +211,3 @@ class PricingContext:
             'strategy_name': self._strategy.get_strategy_name(),
             'quantity': kwargs.get('quantity', 1)
         }
-
