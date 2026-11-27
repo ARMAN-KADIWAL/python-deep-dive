@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+benchmark_results_*.json
+datatype_results_*.txt
+results_*jit.txt
+jit_analysis_report.txt
+jit_analysis_results.json
