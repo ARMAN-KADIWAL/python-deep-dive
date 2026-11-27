@@ -2,7 +2,7 @@
 
 <p align="center">
   <img alt="Python learning labs" src="https://img.shields.io/badge/Learning-Python-3979AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img alt="Organized lab folders" src="https://img.shields.io/badge/Organized_Labs-75-5de6d4?style=for-the-badge&labelColor=17243b" />
+  <img alt="Organized lab folders" src="https://img.shields.io/badge/Organized_Labs-94-5de6d4?style=for-the-badge&labelColor=17243b" />
   <img alt="Topics" src="https://img.shields.io/badge/Topics-OOP_%7C_Data_%7C_Flask_%7C_Concurrency_%7C_Sockets-9987ff?style=for-the-badge&labelColor=17243b" />
 </p>
 
@@ -84,7 +84,7 @@ Choose a topic below. Every linked lab has runnable examples and its own instruc
 </details>
 
 <details open>
-<summary><strong>05 — Databases, SQLite, Pandas & Visualization · 7 labs</strong></summary>
+<summary><strong>05 — Databases, SQLite, Pandas & Visualization · 8 labs</strong></summary>
 
 - [Lab 57 - Interacting with Databases - Using SQLite](Lab%2057/)
 - [Lab 58 - Querying and Filtering Data in SQLite](Lab%2058/)
@@ -93,6 +93,7 @@ Choose a topic below. Every linked lab has runnable examples and its own instruc
 - [Lab 61 - Data Cleaning with Pandas - Handling Missing Data](Lab%2061/)
 - [Lab 62 - Advanced Pandas Operations - Merging and Grouping Data](Lab%2062/)
 - [Lab 63 - Data Visualization with Pandas and Matplotlib](Lab%2063/)
+- [Lab 64 - Final Project: Data Processing and Analysis](Lab%2064/)
 
 </details>
 
@@ -139,6 +140,38 @@ Each project includes runnable code, a requirements file, automated tests, and d
 - [Lab 82: Multi-client Server with Threading](Lab%2082/)
 
 </details>
+
+## Labs 83–100 — Advanced Python and Capstone
+
+- [Lab 83 — HTTP requests and REST clients](Lab%2083/)
+- [Lab 84 — REST API with http.server](Lab%2084/)
+- [Lab 85 — Regular expressions](Lab%2085/)
+- [Lab 86 — Advanced regular expressions](Lab%2086/)
+- [Lab 87 — Basic logging](Lab%2087/)
+- [Lab 88 — Advanced logging](Lab%2088/)
+- [Lab 89 — Command-line interfaces with argparse](Lab%2089/)
+- [Lab 90 — PEP 8 and code style](Lab%2090/)
+- [Lab 91 — Design patterns](Lab%2091/)
+- [Lab 92 — Refactoring for clean code](Lab%2092/)
+- [Lab 93 — Advanced refactoring](Lab%2093/)
+- [Lab 94 — Python Lab 94](Lab%2094/)
+- [Lab 95 — Python Lab 95](Lab%2095/)
+- [Lab 96 — Python Lab 96](Lab%2096/)
+- [Lab 97 — Experimental JIT compiler](Lab%2097/)
+- [Lab 98 — Advanced static typing](Lab%2098/)
+- [Lab 99 — Static typing project](Lab%2099/)
+- [Lab 100 — Full-stack Python capstone](Lab%20100/)
+
+**Repository inventory:** 94 of 94 supplied lab numbers from 6–100 are present. Lab 30 was not supplied and is intentionally excluded. Folder presence is not evidence of successful execution or official course completion. The new code includes reconstructed endings and fixes; Lab 97 JIT verification requires a correctly configured interpreter.
+
+To run the added checks (on an approved development machine):
+
+```bash
+python -m pip install -r "Lab 64/requirements.txt" -r "Lab 83/requirements.txt" -r "Lab 98/requirements.txt" -r "Lab 100/requirements.txt"
+MPLBACKEND=Agg python validate_labs64-100.py
+```
+
+Live public HTTP endpoints, performance measurements and actual public deployment are not verified by this command.
 
 ## Verify Labs 75–82
 

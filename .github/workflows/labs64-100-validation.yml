@@ -1,0 +1,49 @@
+name: Python labs 64, 83-90, 92, 98-100 validation
+
+on:
+  push:
+    paths:
+      - 'Lab 64/**'
+      - 'Lab 83/**'
+      - 'Lab 84/**'
+      - 'Lab 85/**'
+      - 'Lab 86/**'
+      - 'Lab 87/**'
+      - 'Lab 88/**'
+      - 'Lab 89/**'
+      - 'Lab 90/**'
+      - 'Lab 92/**'
+      - 'Lab 98/**'
+      - 'Lab 99/**'
+      - 'Lab 100/**'
+      - 'validate_labs64-100.py'
+      - '.github/workflows/labs64-100-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install approved CI dependencies
+        run: python -m pip install -r "Lab 64/requirements.txt" -r "Lab 83/requirements.txt" -r "Lab 98/requirements.txt" -r "Lab 100/requirements.txt" pytest-cov
+      - name: Syntax and selected functional tests
+        run: python validate_labs64-100.py
+      - name: Static typing Lab 98
+        working-directory: 'Lab 98'
+        run: python -m mypy *.py
+      - name: Static typing Lab 99
+        working-directory: 'Lab 99'
+        run: python -m mypy src/ main.py tests/
+      - name: Capstone coverage
+        working-directory: 'Lab 100'
+        run: python -m pytest tests/ -q --cov=src --cov-report=term-missing
