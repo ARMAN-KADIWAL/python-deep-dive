@@ -16,7 +16,7 @@ on:
       - 'Lab 98/**'
       - 'Lab 99/**'
       - 'Lab 100/**'
-      - 'validate_labs64-100.py'
+      - 'tools/validate_labs64-100.py'
       - '.github/workflows/labs64-100-validation.yml'
   workflow_dispatch:
 
@@ -38,7 +38,7 @@ jobs:
         id: dependencies
         run: python -m pip install "pandas>=1.5,<3" "numpy>=1.24,<3" "matplotlib>=3.6,<4" "seaborn>=0.12,<1" -r "Lab 83/requirements.txt" -r "Lab 98/requirements.txt" -r "Lab 100/requirements.txt" "pytest-cov>=6,<7"
       - name: Syntax and selected functional tests
-        run: python validate_labs64-100.py
+        run: python tools/validate_labs64-100.py
       - name: Static typing Lab 98
         if: ${{ always() && steps.dependencies.outcome == 'success' }}
         working-directory: 'Lab 98'

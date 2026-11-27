@@ -19,3 +19,5 @@ Run `python main.py`, `python -m unittest discover -s tests -v`, `python -m src.
 ## Verification status
 
 Source-based implementation with reconstructed endings where the supplied material was truncated. Automated checks are provided separately; no unobserved cloud-lab results or completion screenshots are claimed.
+
+Recorded CI verification: mypy passed for all 7 source files and 6 unit tests ran successfully. See [GitHub Actions](https://github.com/ARMAN-KADIWAL/python-deep-dive/actions/runs/46041721824) for the exact run and scope.

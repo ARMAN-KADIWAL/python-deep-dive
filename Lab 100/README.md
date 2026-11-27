@@ -24,6 +24,10 @@ Task Management option selected to match provided code. The truncated production
 - `docs/requirements.md`
 - `docs/deployment.md`
 
+- `tests/test_task_lifecycle.py`
+
 ## Verification status
 
 Source-based implementation with reconstructed endings where the supplied material was truncated. Automated checks are provided separately; no unobserved cloud-lab results or completion screenshots are claimed.
+
+Recorded CI verification: 11 tests passed, with 5 warnings and 97.58% line coverage (81% minimum enforced). See [GitHub Actions](https://github.com/ARMAN-KADIWAL/python-deep-dive/actions/runs/46041721824) for the exact run and scope.

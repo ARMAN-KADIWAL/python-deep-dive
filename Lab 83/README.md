@@ -15,6 +15,8 @@ HTTP GET/POST, JSON, HTML, exceptions, headers and basic authentication. `header
 - `headers_auth.py`
 - `requirements.txt`
 
+- `test_offline_http.py`
+
 ## Verification status
 
 Source-based implementation with reconstructed endings where the supplied material was truncated. Automated checks are provided separately; no unobserved cloud-lab results or completion screenshots are claimed.

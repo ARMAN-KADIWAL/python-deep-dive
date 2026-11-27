@@ -5,3 +5,31 @@ venv/
 validation-output/
 Lab 78/benchmark_results.json
 Lab 79/scraping_results.json
+
+# Common generated development files
+*.log
+*.db
+*.sqlite
+*.sqlite3
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.env
+.env.*
+!.env.example
+*.py.bak
+*.py.before_isolation_fix
+.DS_Store
+Thumbs.db
+
+# Generated report outputs
+/Lab 64/reports/
+/Lab 64/visualizations/
+
+# Keep committed verification and proof assets visible
+!**/verification/*.log
+!**/proof/*.log

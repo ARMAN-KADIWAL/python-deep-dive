@@ -3,7 +3,7 @@
 ## Run command
 
 ```bash
-python3 demo.py
+python3 lab_42.py
 ```
 
 ## Actual terminal screenshot

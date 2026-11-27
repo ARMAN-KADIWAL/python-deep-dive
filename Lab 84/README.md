@@ -9,6 +9,8 @@ Start one server at a time with `python basic_server.py`, `python multi_method_s
 - `restful_api.py`
 - `advanced_api.py`
 
+- `test_restful_api.py`
+
 ## Verification status
 
 Source-based implementation with reconstructed endings where the supplied material was truncated. Automated checks are provided separately; no unobserved cloud-lab results or completion screenshots are claimed.

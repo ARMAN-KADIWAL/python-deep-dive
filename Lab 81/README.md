@@ -49,7 +49,7 @@ If another lab already uses the port, select another port on both processes, for
 python3 -m unittest discover -v -p "test_lab81.py"
 ```
 
-The committed [verification/](verification/) directory contains the recorded local run. From the repository root, `python3 validate_labs75_82.py --smoke` reruns all eight labs and writes fresh logs to `validation-output/`. Timing values and intentional race outcomes can change between runs. Persistent servers and interactive clients are covered by owned-server integration tests rather than left running by the smoke runner.
+The committed [verification/](verification/) directory contains the recorded local run. From the repository root, `python3 tools/validate_labs75_82.py --smoke` reruns all eight labs and writes fresh logs to `validation-output/`. Timing values and intentional race outcomes can change between runs. Persistent servers and interactive clients are covered by owned-server integration tests rather than left running by the smoke runner.
 
 ## Files
 

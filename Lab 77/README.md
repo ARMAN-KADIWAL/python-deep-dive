@@ -36,7 +36,7 @@ python3 advanced_multiprocessing.py
 python3 -m unittest discover -v -p "test_lab77.py"
 ```
 
-The committed [verification/](verification/) directory contains the recorded local run. From the repository root, `python3 validate_labs75_82.py --smoke` reruns all eight labs and writes fresh logs to `validation-output/`. Timing values and intentional race outcomes can change between runs. Persistent servers and interactive clients are covered by owned-server integration tests rather than left running by the smoke runner.
+The committed [verification/](verification/) directory contains the recorded local run. From the repository root, `python3 tools/validate_labs75_82.py --smoke` reruns all eight labs and writes fresh logs to `validation-output/`. Timing values and intentional race outcomes can change between runs. Persistent servers and interactive clients are covered by owned-server integration tests rather than left running by the smoke runner.
 
 ## Files
 

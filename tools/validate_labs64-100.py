@@ -4,7 +4,7 @@ import py_compile
 import subprocess
 import sys
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 LABS = [64, 83, 84, 85, 86, 87, 88, 89, 90, 92, 98, 99, 100]
 
 

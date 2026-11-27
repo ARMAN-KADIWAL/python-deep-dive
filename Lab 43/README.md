@@ -18,4 +18,4 @@ python3 lab_43.py
 
 ## Proof
 
-See [PROOF.md](PROOF.md) for execution notes and the observed terminal results. Original terminal screenshots are supplied in the downloadable evidence pack; they are not yet repository image assets.
+See [PROOF.md](PROOF.md) for execution notes and the observed terminal results. The [recorded screenshot](proof/lab43-final-proof.png) is preserved in this folder.
