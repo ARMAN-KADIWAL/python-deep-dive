@@ -1,0 +1,6 @@
+product_id,product_name,category,price,quantity_sold,sale_date
+1,Laptop Pro,Electronics,1299.99,15,2024-01-15
+2,Wireless Mouse,Electronics,29.99,45,2024-01-16
+3,Office Chair,Furniture,199.99,8,2024-01-17
+4,Desk Lamp,Furniture,49.99,22,2024-01-18
+5,Smartphone,Electronics,799.99,30,2024-01-19

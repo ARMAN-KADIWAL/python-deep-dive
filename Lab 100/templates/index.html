@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to Task Manager</h1>
+    <p class="lead">Organize your tasks efficiently with our simple and powerful task management system.</p>
+    <hr class="my-4">
+    <p>Get started by creating an account or logging in to manage your tasks.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('register') }}" role="button">Get Started</a>
+    <a class="btn btn-outline-primary btn-lg" href="{{ url_for('login') }}" role="button">Login</a>
+</div>
+{% endblock %}

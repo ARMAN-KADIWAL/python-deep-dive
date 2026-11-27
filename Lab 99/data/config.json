@@ -1,0 +1,13 @@
+{
+    "processing_options": {
+        "include_tax": true,
+        "tax_rate": 0.08,
+        "currency": "USD",
+        "output_format": "summary"
+    },
+    "filters": {
+        "min_price": 0.0,
+        "max_price": 2000.0,
+        "categories": ["Electronics", "Furniture"]
+    }
+}
