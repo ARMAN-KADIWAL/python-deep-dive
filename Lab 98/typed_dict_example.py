@@ -1,5 +1,5 @@
 # typed_dict_example.py
-from typing import TypedDict, List, Optional, NotRequired
+from typing import TypedDict, List, Dict, Optional, NotRequired
 from datetime import datetime
 
 # Define TypedDict classes for structured data

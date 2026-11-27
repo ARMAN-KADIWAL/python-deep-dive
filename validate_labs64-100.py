@@ -21,7 +21,15 @@ def main():
     for lab in (85, 86, 92, 98):
         for p in sorted((ROOT / f"Lab {lab}").glob("*.py")):
             run(lab, p.name)
+    run(83, "test_offline_http.py")
+    run(84, "test_restful_api.py")
+    run(87, "complete_logging_app.py")
+    run(87, "log_analyzer.py")
+    run(88, "database_setup.py")
+    run(88, "integrated_logging_system.py")
+    run(88, "log_analyzer.py")
     run(89, "basic_cli.py", "Hello")
+    run(89, "calculator_cli.py", "arithmetic", "--add", "1", "2", "3")
     run(89, "help_demo.py", "--version")
     run(90, "good_style.py")
     run(90, "pep8_function.py")
@@ -29,7 +37,7 @@ def main():
     run(99, "-m", "src.advanced_types")
     run(99, "-m", "unittest", "discover", "-s", "tests", "-v")
     run(100, "-m", "pytest", "tests", "-q")
-    print("Selected functional checks passed; live HTTP and public deployment are not tested.")
+    print("Selected functional checks passed; live public HTTP and public deployment are not tested.")
 
 
 if __name__ == "__main__":

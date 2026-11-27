@@ -235,7 +235,7 @@ class AdvancedAPIHandler(BaseHTTPRequestHandler):
             }
             
             self.users[self.next_id] = new_user
-            self.next_id += 1
+            type(self).next_id += 1
             
             self.send_json_response(201, {
                 "message": "User created successfully",
