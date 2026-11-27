@@ -1,6 +1,6 @@
 # Lab 100: Capstone Project - Full Stack Python Application
 
-Task Management option selected to match provided code. The truncated production app was reconstructed from the earlier complete app using an application factory, template paths, independent test DBs, and WSGI entry point. Run `python -m pytest tests/ -v` and `python -m src.app`, then open http://127.0.0.1:5000. Public production deployment, coverage target and load testing are not verified.
+Task Management option selected to match provided code. The truncated production app was reconstructed from the earlier complete app using an application factory, template paths, independent test DBs, and WSGI entry point. Run `python -m pytest tests/ -v` and `python -m src.app`, then open http://127.0.0.1:5000. Public production deployment and load testing are not verified. Automated CI enforces a minimum 81% line coverage target for this lab.
 
 ## Files
 
